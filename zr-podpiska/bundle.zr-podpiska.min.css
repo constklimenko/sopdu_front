@@ -512,3 +512,41 @@ a.zr-button:hover {
 .choose__year__text {
   padding-top: 25px;
 }
+.pluses {
+  background-color: #F2F2F2;
+  padding: 78px 0 78px 0;
+}
+.pluses__title {
+  grid-column: span 2;
+  justify-self: center;
+}
+.pluses__item {
+  background-color: white;
+  padding: 2rem;
+}
+.pluses .block-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+}
+.item__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.block-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 90%;
+}
+@media only screen and (min-width: 1001px) {
+  .block-container {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 1401px) {
+  .block-container {
+    width: 70%;
+  }
+}

@@ -1,0 +1,27 @@
+.pluses{
+  background-color: @gray_01;
+  padding: @block-gap 0 @block-gap 0;
+  
+  &__title{
+    .grid-col-span;
+    justify-self: center;
+  }
+  &__item{
+    background-color: @white;
+    padding: 2rem;
+  }
+  
+  & .block-container{
+    .grid(1fr 1fr, auto,1rem,1rem)
+  }
+}
+
+.item__title{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.block-container{
+  .container-m();
+  
+}
