@@ -1,9 +1,16 @@
 .header{
+ 
+  .container-m();
+  .flex-row();
+  align-content: center;
+  align-items: center; 
+  justify-content: space-between;
+  padding-top: 22px;
   
-  
-  
-  &__logo{
-    
+  &__logo{   
+    .bg-contain("img/header/logo.png");
+    width: 183px;
+    height: 36px;
   }
   
   &__link{
@@ -11,6 +18,22 @@
   }
   
   &__in{
-    
+    width: 138px;
+      height: 50px;
+      background-color: @gray_02;
+    .flex-row();
+    align-content: center;
+    justify-content: center;
+    &__img{
+      display: inline-block;
+      
+      content:" ";
+      width: 32px;
+      height: 32px;
+      .bg-contain('img/header/in.svg');
+    }
+    &__text{
+      padding-top: .3em;
+    }
   }
 }

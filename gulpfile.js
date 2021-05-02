@@ -62,12 +62,12 @@ gulp.task('pages', function() {
 
 gulp.task('less', function() {
     return gulp.src(config.path.less)
-        .pipe(sourcemaps.init())
+        //  .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(concat(config.output.cssName))
         .pipe(authoprefixer())
-        .pipe(cleanCss())
-        .pipe(sourcemaps.write())
+        // .pipe(cleanCss())
+        //  .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.path))
         .pipe(browserSync.stream());
 });

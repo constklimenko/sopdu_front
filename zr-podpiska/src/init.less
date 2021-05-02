@@ -151,9 +151,9 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-a:hover {
-  color          : #0056b3;
-  text-decoration: underline;
+a:hover, a:hover span {
+  color          : @a-color;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
