@@ -1,6 +1,6 @@
 @import "parts/root";
 @import "parts/params";
-@import "parts/header/header";
+
 
 
 *,
@@ -9,9 +9,26 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'PT Sans';
+  src: 
+       url(fonts/PT_sans/PTSans-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: 
+       url(fonts/PT_sans/PTSans-Regular.ttf);
+  font-weight: normal;
+}
+
+
 html {
-  font-family                : sans-serif;
-  line-height                : 1.15;
+  font-family                : @font-family;
+  
+  font-size: 18px;
+line-height: 130%;
   -webkit-text-size-adjust   : 100%;
   -ms-text-size-adjust       : 100%;
   -ms-overflow-style         : scrollbar;
@@ -37,7 +54,7 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, @font-family, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: @font-family, -apple-system, BlinkMacSystemFont,  "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   font-size       : 1rem;
   font-weight     : 400;
@@ -46,6 +63,8 @@ body {
   text-align      : left;
   background-color: @white;
   overflow: hidden;
+  .grid();
+  row-gap: @block-gap;
 }
 
 [tabindex="-1"]:focus {
@@ -172,3 +191,16 @@ a:not([href]):not([tabindex]):focus {
 }
 
 // end of bs styles
+
+.zr-button:extend( .btn all, .button all){
+  background-color: @dark_red;
+  color: @white;
+  border-radius: 25px;
+  max-width: 309px;
+  align-self: center;
+  justify-self: start;
+}
+
+@import "parts/header/header";
+@import "parts/sbs_first/sbs_first";
+
