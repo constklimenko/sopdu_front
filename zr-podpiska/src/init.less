@@ -27,7 +27,7 @@
 html {
   font-family                : @font-family;
   
-  font-size: 18px;
+  font-size: var(--font-size);
 line-height: 130%;
   -webkit-text-size-adjust   : 100%;
   -ms-text-size-adjust       : 100%;
@@ -62,7 +62,7 @@ body {
   color           : @black;
   text-align      : left;
   background-color: @white;
-  overflow: hidden;
+  
   .grid();
   row-gap: @block-gap;
 }
@@ -192,6 +192,11 @@ a:not([href]):not([tabindex]):focus {
 
 // end of bs styles
 
+
+h2 {
+  font-size: @h2-size;
+}
+
 .zr-button:extend( .btn all, .button all){
   background-color: @dark_red;
   color: @white;
@@ -199,8 +204,14 @@ a:not([href]):not([tabindex]):focus {
   max-width: 309px;
   align-self: center;
   justify-self: start;
+  padding: 11px 10% 11px 10%;
+  font-weight: 700;
+}
+
+a.zr-button:hover{
+  color: inherit;
 }
 
 @import "parts/header/header";
 @import "parts/sbs_first/sbs_first";
-
+@import "parts/sbs_choose/sbs_choose";
