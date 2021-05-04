@@ -1,22 +1,41 @@
 .subscribe-first {
   .container-m();
   background-color: @gray_01;
-  padding         : 56px 90px 56px 90px;
-  .grid(1.3fr 1fr, auto, 10%, 7px);
+  padding         : 56px 90px 0px 90px;
+  .grid(1.3fr 1fr, auto, 0, 7px);
   align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  @media only screen and (max-width: @size-tablete) {
+    .grid( 1fr, auto, 0, 7px);
+    
+  }
+
 
   &__img {
     grid-row   : span 4;
     grid-column: 2;
     width      : 100%;
     height     : auto;
+    z-index: 10;
+
+    @media only screen and (max-width: @size-tablete) {
+      grid-column: 1;
+      grid-row: 5;
+    }
   }
 
   &__title {
     grid-row   : 1;
     font-size  : @h2-size;
     line-height: 110%;
+    z-index: 10;
 
+  }
+
+  &__button{
+    z-index: 10;
   }
 
   &__small-text {
@@ -24,5 +43,31 @@
     line-height: 130%;
     align-self : start;
     padding-left: 6%;
+    z-index: 10;
+  }
+
+  &__circle {
+    width: calc( 0.77 * var(--container-width));
+    height: calc( 0.77 * var(--container-width));
+    background-color: @gray_02;
+    border-radius: 50%;
+    position: absolute;
+    top: 33px;
+    left: calc( 0.45 * var(--container-width));
+    z-index: 1;
+
+    @media only screen and (max-width: @size-tablete) {
+      width: 120%;
+      height: 120%;
+      top: 50%;
+     left: -10%;
+    }
+
+    @media only screen and (min-width: 1401px) {
+      width: 839px;
+      height: 839px;
+      
+    }
+
   }
 }
