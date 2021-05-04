@@ -206,13 +206,40 @@ h2 {
   justify-self: start;
   padding: 11px 10% 11px 10%;
   font-weight: 700;
+  font-size: 17px;
+  .flex-row();
+    align-content: center;
+    justify-content: center;
 }
 
 a.zr-button:hover{
   color: inherit;
 }
 
+.block-container{
+  .container-m();
+  
+}
+
 @import "parts/header/header";
 @import "parts/sbs_first/sbs_first";
 @import "parts/sbs_choose/sbs_choose";
 @import "parts/sbs_pluses/sbs_pluses";
+
+.m-show {
+  @media (min-width: @size-mobile + 1) {
+    display: none!important;
+  }
+}
+
+.m-hide {
+  @media (max-width: @size-mobile) {
+    display: none!important;
+  }
+}
+
+.t-hide {
+  @media (max-width: @size-tablete) {
+    display: none!important;
+  }
+}

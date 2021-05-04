@@ -1,11 +1,27 @@
 header.header
-  a.header__link
-    .header__logo(href="/") 
-  a.header__link(href="") Оформление подписки
-  a.header__link(href="") О подписке
-  a.header__link(href="") Контакты
-  a.header__in(href="")
-    .header__in__img  
-    span.header__in__text Вход 
+  .block-container.header__container
+    .header__toggle.m-show(onclick="toggleNav()")
+      .header__toggle__line
+      .header__toggle__line
+
+    a.header__link
+      .header__logo(href="/") 
+    a.header__link(href="").m-hide Оформление подписки
+    a.header__link(href="").m-hide О подписке
+    a.header__link(href="").m-hide Контакты
+    a.header__link(href="").m-show
+      .header__in__img  ddd
+    a.header__in.zr-button(href="").m-hide
+      .header__in__img  ddd
+      span.header__in__text.m-hide Вход 
 
   
+      
+    .header__bottom.m-show.m-hide
+      a.header__link(href="#projects") Портфолио
+      a.header__link(href) Виды услуг
+      a.header__link(href) Калькулятор
+      a.header__link(href="#adress") Контакты
+      .header__cross.m-show(onclick="toggleNav()") ×
+    script
+        include toggle_header.js

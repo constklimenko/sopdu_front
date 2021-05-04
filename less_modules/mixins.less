@@ -439,10 +439,10 @@
       @sand 100%);
 }
 
-.masked-icon(@url) {
+.masked-icon(@url, @size: 0.9em) {
   display         : inline-block;
-  height          : 0.9em;
-  width           : 0.9em;
+  height          : @size;
+  width           : @size;
   background-color: currentColor;
   mask-image      : url(@url);
   mask-repeat     : no-repeat;

@@ -1,39 +1,98 @@
 .header{
- 
-  .container-m();
-  .flex-row();
+  background-color: @gray_01;
+  &__container{
+    .flex-row();
+  
+  
   align-content: center;
   align-items: center; 
   justify-content: space-between;
-  padding-top: 22px;
+  padding: 15px 0 15px 0;
+  }
+ 
+  
   
   &__logo{   
     .bg-contain("img/header/logo.png");
     width: 183px;
     height: 36px;
-  }
-  
-  &__link{
+
     
   }
   
-  &__in{
-    width: 138px;
-      height: 50px;
-      background-color: @gray_02;
-    .flex-row();
-    align-content: center;
-    justify-content: center;
-    &__img{
-      display: inline-block;
-      
-      content:" ";
-      width: 32px;
-      height: 32px;
-      .bg-contain('img/header/in.svg');
-    }
-    &__text{
-      padding-top: .3em;
+  &__link{
+    @media (max-width: @size-mobile) {
+      order: 2;
     }
   }
+  
+  &__in{
+    width: 130px;
+    height: 50px;
+    flex-wrap: nowrap!important;  
+    @media (max-width: @size-mobile) {
+      order: 3;
+    }
+    
+    &__img{
+      .masked-icon('img/header/in.svg');
+      width: 32px;
+      height: 32px;
+      content: " ";
+    
+     
+    }
+
+    &:hover > &__text { color:inherit}
+    
+  }
+
+  &__toggle {
+    left              : 5%;
+    display           : grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width             : 30px;
+    height            : 1.2rem;
+    align-self        : center;
+    justify-self      : center;
+    row-gap: 8px;
+
+    cursor: pointer;
+
+    @media (max-width: @size-mobile) {
+      order: 1;
+    }
+  }
+
+  &__toggle__line {
+    height       : 50%;
+    border-bottom: 2px solid @dark_red;
+  }
+
+  &__bottom {
+    .grid(1fr, repeat(4, 2em), 10px, 20px);
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    right      : 0;
+    z-index    : 20;
+    background : white;
+    height     : 100vh;
+    padding-top: 10vh;
+    z-index    : 20;
+  }
+
+  &__cross {
+    text-transform: uppercase;
+    text-shadow   : 0.1em 0.1em 4px black;
+    position      : absolute;
+    top           : 30px;
+    left          : 30px;
+    font-family   : 'HelveticaNavCyr', sans-serif;
+    font-size     : 24px;
+    font-weight   : 600;
+    line-height   : 1.4em;
+    cursor        : pointer;
+  }
+
 }
