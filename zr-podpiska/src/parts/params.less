@@ -17,8 +17,8 @@
 @viewport-max: 1920px;
 @viewport-min: 320px;
 
-@size-mobile: 580px;
-@size-tablete: 1100px;
+@size-mobile: 700px;
+@size-tablete: 1040px;
 
 @article-max: 1100px;
 
@@ -42,7 +42,14 @@ body{
 
   @media only screen and (max-width: @size-tablete) {
     --block-gap: 20px;
-   
+    --font-size: 12px;
+    --h2-size: 24px;
+  }
+
+  @media only screen and (min-width: @size-tablete) {
+    
+    --font-size: 18px;
+    --h2-size: 44px;
   }
 }
 
