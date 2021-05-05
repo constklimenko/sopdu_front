@@ -14,7 +14,8 @@
      
   &__logo{   
     .bg-contain("img/header/logo.png");
-    width: 183px;
+    max-width: 183px;
+    width: calc( 0.17 * var(--container-width));
     height: 36px;
     @media (max-width: @size-mobile) {
       width: 101px;
@@ -26,6 +27,7 @@
   &__link{
 font-weight: 700;
 text-decoration: none;
+color: @black;
     @media (max-width: @size-mobile) {
       order: 2;
     }

@@ -6,9 +6,10 @@
   align-items: center;
   overflow: hidden;
   position: relative;
+  margin-top: 32px!important;
 
   @media only screen and (max-width: @size-tablete) {
-    .grid( 1fr, auto, 0, 7px);
+    .grid( 1fr, auto, 0, 15px);
     padding: 22px 1em 0px 1em;
     
   }
@@ -46,10 +47,12 @@
   &__button__container{
     .grid(1fr, 50px 16px, 10px,10px);
     justify-self: start;
+    row-gap: 30px;
     @media only screen and (max-width: @size-tablete) {
-      
+      row-gap: 1rem;
       justify-self: center;
       width:75vw;
+      padding-bottom: 15px;
     }
     
   }
@@ -93,7 +96,7 @@
     @media only screen and (max-width: @size-tablete) {
       width: 120vw;
       height: 120vw;
-      top: 50%;
+      top: 53%;
      left: -15vw;
     }
 
