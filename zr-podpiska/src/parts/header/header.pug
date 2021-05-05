@@ -18,10 +18,14 @@ header.header
   
       
     .header__bottom.m-show.m-hide
-      a.header__link(href="#projects") Портфолио
-      a.header__link(href) Виды услуг
-      a.header__link(href) Калькулятор
-      a.header__link(href="#adress") Контакты
-      .header__cross.m-show(onclick="toggleNav()") ×
+      a.header__link
+        .header__logo(href="/") 
+      a.header__link(href="") Оформление подписки
+      a.header__link(href="") О подписке
+      a.header__link(href="") Контакты
+      a.header__in.zr-button(href="")
+        .header__in__img  ddd
+        span.header__in__text Вход 
+      .header__cross.m-show(onclick="toggleNav()") 
     script
         include toggle_header.js

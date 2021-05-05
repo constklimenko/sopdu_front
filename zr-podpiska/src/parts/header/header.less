@@ -11,16 +11,21 @@
   }
  
   
-  
+     
   &__logo{   
     .bg-contain("img/header/logo.png");
     width: 183px;
     height: 36px;
-
+    @media (max-width: @size-mobile) {
+      width: 101px;
+      height: 21px;
+    }
     
   }
   
   &__link{
+font-weight: 700;
+text-decoration: none;
     @media (max-width: @size-mobile) {
       order: 2;
     }
@@ -29,17 +34,22 @@
   &__in{
     width: 130px;
     height: 50px;
-    flex-wrap: nowrap!important;  
+    flex-wrap: nowrap!important;
+    justify-self: center;  
     @media (max-width: @size-mobile) {
       order: 3;
+
     }
     
     &__img{
+      @media (max-width: @size-mobile) {
+        color: @dark_red;
+      }
       .masked-icon('img/header/in.svg');
       width: 32px;
       height: 32px;
       content: " ";
-    
+     
      
     }
 
@@ -70,24 +80,34 @@
   }
 
   &__bottom {
-    .grid(1fr, repeat(4, 2em), 10px, 20px);
-    position   : absolute;
-    top        : 0;
-    left       : 0;
-    right      : 0;
+    .grid(1fr, repeat(4, 2em) 50px, 10px, 20px);
+    position   : fixed;
+    top        : 126px;
+    left       : 5%;
+    right      : 5%;
     z-index    : 20;
     background : white;
-    height     : 100vh;
+    height     : auto;
     padding-top: 10vh;
+    padding-bottom: 10vh;
     z-index    : 20;
+    justify-items: center;
+    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.445) ;
+
+    &  .zr-button div,  &  .zr-button span { color: @white;}
   }
 
   &__cross {
-    text-transform: uppercase;
-    text-shadow   : 0.1em 0.1em 4px black;
+    display: block;
+    width: 16vw;
+    height: 16vw;
+    .bg-contain('img/common/X.svg');
+    filter: drop-shadow(0.1em 0.1em 4px black) ;
+   
     position      : absolute;
-    top           : 30px;
-    left          : 30px;
+    top           : -18vw;
+    left          : 37vw;
+    color: white;
     font-family   : 'HelveticaNavCyr', sans-serif;
     font-size     : 24px;
     font-weight   : 600;

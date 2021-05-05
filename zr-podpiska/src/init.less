@@ -64,7 +64,7 @@ body {
   background-color: @white;
   
   .grid();
-  row-gap: @block-gap;
+  // row-gap: @block-gap;
 }
 
 [tabindex="-1"]:focus {
@@ -192,10 +192,21 @@ a:not([href]):not([tabindex]):focus {
 
 // end of bs styles
 
+a {
+  color: @dark_red;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+a:hover{
+  color: @light_red;
+  text-decoration: underline;
+}
 
 h2 {
   font-size: @h2-size;
 }
+
 
 .zr-button:extend( .btn all, .button all){
   background-color: @dark_red;
@@ -207,6 +218,7 @@ h2 {
   padding: 11px 10% 11px 10%;
   font-weight: 700;
   font-size: 17px;
+  text-decoration: none;
   .flex-row();
     align-content: center;
     justify-content: center;
@@ -215,8 +227,9 @@ h2 {
   
 }
 
-a.zr-button:hover{
-  color: inherit;
+.zr-button:hover{
+  color: @white;
+  background-color: @light_red;
 }
 
 .block-container{
@@ -224,10 +237,17 @@ a.zr-button:hover{
   
 }
 
+section{
+  margin-top: @block-gap!important;
+}
+
 @import "parts/header/header";
 @import "parts/sbs_first/sbs_first";
 @import "parts/sbs_choose/sbs_choose";
 @import "parts/sbs_pluses/sbs_pluses";
+
+
+
 
 .m-show {
   @media (min-width: @size-mobile + 1) {
