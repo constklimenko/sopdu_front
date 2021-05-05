@@ -228,6 +228,7 @@ body {
   grid-template-rows: auto;
   grid-row-gap: 0;
   grid-column-gap: 0;
+  position: relative;
 }
 [tabindex="-1"]:focus {
   outline: 0 !important;
@@ -388,6 +389,10 @@ section {
 }
 .header {
   background-color: #F2F2F2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 .header__container {
   display: flex;
@@ -874,6 +879,7 @@ section {
   position: absolute;
   top: 50%;
   right: 0;
+  cursor: pointer;
 }
 .questions__item__arrow-up {
   transform: rotate(180deg);
@@ -884,6 +890,12 @@ section {
 }
 .questions__item__text--full {
   display: block;
+}
+.footer {
+  margin-top: var(--block-gap);
+  background-color: #989898;
+  width: 100%;
+  min-height: 50px;
 }
 @media (min-width: 581px) {
   .m-show {
