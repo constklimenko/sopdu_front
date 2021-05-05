@@ -15,15 +15,12 @@
 @viewport-max: 1920px;
 @viewport-min: 320px;
 
-@size-mobile: 560px;
+@size-mobile: 580px;
 @size-tablete: 1100px;
 
 @article-max: 1100px;
 
-//paddings
 
-@padding-h: 100px;
-@block-gap:78px;
 
 // font
 @font-family: 'PT Sans', sans-serif;
@@ -38,8 +35,20 @@ body{
   --h2-size: var(--return);
   .f-size2( 12px, 18px);
   --font-size: var(--return2);
+
+  --block-gap: 78px;
+
+  @media only screen and (max-width: @size-tablete) {
+    --block-gap: 20px;
+   
+  }
 }
 
+
+//paddings
+
+@padding-h: 100px;
+@block-gap:var(--block-gap);
 
 @h2-size: var(--h2-size);
 

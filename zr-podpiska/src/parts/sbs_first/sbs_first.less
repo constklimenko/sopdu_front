@@ -1,28 +1,32 @@
 .subscribe-first {
   .container-m();
   background-color: @gray_01;
-  padding         : 56px 90px 0px 90px;
-  .grid(1.3fr 1fr, auto, 0, 7px);
+  padding         : calc( 0.05 * var(--container-width)) calc( 0.08 * var(--container-width)) 0 calc( 0.08 * var(--container-width));
+  .grid(1.3fr 1fr, 98px minmax(60px,auto) auto, 5%, 23px);
   align-items: center;
   overflow: hidden;
   position: relative;
 
   @media only screen and (max-width: @size-tablete) {
     .grid( 1fr, auto, 0, 7px);
+    padding: 22px 1em 0px 1em;
     
   }
 
 
   &__img {
-    grid-row   : span 4;
+    grid-row   : span 3;
     grid-column: 2;
     width      : 100%;
     height     : auto;
     z-index: 10;
+    box-shadow: -10px 10px 30px @gray_04;
 
     @media only screen and (max-width: @size-tablete) {
       grid-column: 1;
-      grid-row: 5;
+      grid-row: 4;
+      max-width: 224px;
+      justify-self: center;
     }
   }
 
@@ -32,18 +36,48 @@
     line-height: 110%;
     z-index: 10;
 
+    @media only screen and (max-width: @size-tablete) {
+      text-align: center;
+    }
+
+  }
+
+
+  &__button__container{
+    .grid(1fr, 50px 16px, 10px,10px);
+    justify-self: start;
+    @media only screen and (max-width: @size-tablete) {
+      
+      justify-self: center;
+      width:75vw;
+    }
+    
   }
 
   &__button{
     z-index: 10;
+    justify-self: center;
+    @media only screen and (max-width: @size-tablete) {
+      padding: 11px 1em 11px 1em;
+    }
+  }
+
+  &__text{
+    align-self: start;
+
+    @media only screen and (max-width: @size-tablete) {
+      text-align: center;
+    }
+   
   }
 
   &__small-text {
     font-size  : 12px;
     line-height: 130%;
-    align-self : start;
-    padding-left: 6%;
+    align-self : center;
+    justify-self: center;
     z-index: 10;
+    color: @gray_03;
   }
 
   &__circle {
@@ -53,14 +87,14 @@
     border-radius: 50%;
     position: absolute;
     top: 33px;
-    left: calc( 0.45 * var(--container-width));
+    left: 50%;
     z-index: 1;
 
     @media only screen and (max-width: @size-tablete) {
-      width: 120%;
-      height: 120%;
+      width: 120vw;
+      height: 120vw;
       top: 50%;
-     left: -10%;
+     left: -15vw;
     }
 
     @media only screen and (min-width: 1401px) {
