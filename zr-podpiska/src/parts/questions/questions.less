@@ -1,0 +1,46 @@
+.questions{
+
+    .block-container();
+    .grid(1fr, @h2-size auto, 0, 20px);
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    
+
+    &__item{
+        text-align: left;
+        background-color: @gray_02;
+        padding: 20px 30px 20px 30px;
+        width: 100%;
+
+        &__title{
+            font-weight: 700;
+            font-size:18px ;
+            position: relative;
+        }
+
+        &__arrow{
+            .bg-contain('img/common/VectorDown.svg');
+            height: 10px;
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+
+        &__arrow-up {
+            transform: rotate(180deg);
+
+        }
+
+        &__text{
+            font-size:17px ;
+            display: none;
+        }
+
+       
+        &__text--full {
+            display: block;
+        }
+    }
+}
