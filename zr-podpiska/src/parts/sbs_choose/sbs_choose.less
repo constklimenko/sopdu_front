@@ -29,7 +29,7 @@
   
   &__month, &__year{
     background-color: @gray_01;
-    padding: calc( 0.04 * var(--container-width)) calc( 0.05 * var(--container-width)) calc( 0.04 * var(--container-width)) calc( 0.05 * var(--container-width));
+    padding: calc( 0.05 * var(--container-width)) calc( 0.05 * var(--container-width)) calc( 0.05 * var(--container-width)) calc( 0.05 * var(--container-width));
 
     @media only screen and (max-width: @size-tablete) {
       padding: 2rem 2rem 2rem 2rem ;
@@ -90,6 +90,16 @@
     
     &__text{
       padding-top: 25px;
+    }
+
+
+    &__text, &__title {
+      max-width: 384px;
+
+      @media only screen and (max-width: @size-tablete) {
+        text-align: center;
+        margin: auto;
+      }
     }
   }
   

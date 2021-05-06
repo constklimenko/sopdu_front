@@ -1,8 +1,8 @@
 .subscribe-first {
   .container-m();
   background-color: @gray_01;
-  padding         : calc( 0.05 * var(--container-width)) calc( 0.08 * var(--container-width)) 0 calc( 0.08 * var(--container-width));
-  .grid(1.3fr 1fr, 98px minmax(60px,auto) auto, 5%, 23px);
+  padding         : calc( 0.05 * var(--container-width)) calc( 0.05 * var(--container-width)) 0 calc( 0.05 * var(--container-width));
+  .grid(calc( 0.34 * var(--container-width)) minmax(1fr,calc( 0.36 * var(--container-width)), minmax(98px,auto) minmax(60px,auto)) auto, calc( 0.12 * var(--container-width)), 23px);
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -18,10 +18,13 @@
   &__img {
     grid-row   : span 3;
     grid-column: 2;
-    width      : 100%;
-    height     : auto;
+    width      : auto;
+    
+    height: calc( 0.4 * var(--container-width));
+
     z-index: 10;
     box-shadow: -10px 10px 30px @gray_04;
+    align-self: end;
 
     @media only screen and (max-width: @size-tablete) {
       grid-column: 1;
@@ -48,6 +51,7 @@
     .grid(1fr, 50px 16px, 10px,10px);
     justify-self: start;
     row-gap: 30px;
+    align-self: start;
     @media only screen and (max-width: @size-tablete) {
       row-gap: 1rem;
       justify-self: center;
@@ -67,9 +71,11 @@
 
   &__text{
     align-self: start;
+    max-width: 384px;
 
     @media only screen and (max-width: @size-tablete) {
       text-align: center;
+      margin: auto;
     }
    
   }
@@ -90,7 +96,7 @@
     border-radius: 50%;
     position: absolute;
     top: 33px;
-    left: 50%;
+    left: 44.6%;
     z-index: 1;
 
     @media only screen and (max-width: @size-tablete) {

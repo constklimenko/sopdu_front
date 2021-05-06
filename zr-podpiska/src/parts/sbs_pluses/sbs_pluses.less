@@ -18,7 +18,7 @@
     justify-items: center;
     text-align: center;
     background-color: @white;
-    padding: calc( 0.033 * var(--container-width)) calc( 0.05 * var(--container-width)) 0 calc( 0.05 * var(--container-width));
+    padding: calc( 0.03 * var(--container-width)) calc( 0.035 * var(--container-width)) 0 calc( 0.035 * var(--container-width));
     @media only screen and (max-width: @size-tablete){
       width:100%;
       padding-top: 24px;
@@ -52,7 +52,7 @@
   
   & .block-container{
 
-    .grid(1fr 1fr 1fr,@h2-size  auto ,2% ,1.5rem);
+    .grid(1fr 1fr 1fr,@h2-size  auto ,2% ,calc( 0.01 * var(--container-width)));
     
     @media only screen and (max-width: @size-tablete) {
       display: flex;

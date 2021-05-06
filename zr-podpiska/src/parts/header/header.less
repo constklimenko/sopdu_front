@@ -17,10 +17,13 @@
   
      
   &__logo{   
-    .bg-contain("img/header/logo.png");
-    max-width: 183px;
+    
+    .masked-icon("img/common/logo.svg");
+    color:@dark_red;
+    max-width: 240px;
+    max-height: 50px;
     width: calc( 0.17 * var(--container-width));
-    height: 36px;
+    height: calc( 0.034 * var(--container-width));;
     @media (max-width: @size-mobile) {
       width: 101px;
       height: 21px;

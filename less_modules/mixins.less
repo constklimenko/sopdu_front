@@ -439,15 +439,17 @@
       @sand 100%);
 }
 
-.masked-icon(@url, @size: 0.9em) {
+.masked-icon(@url, @width: 0.9em, @height: 0.9em) {
   display         : inline-block;
-  height          : @size;
-  width           : @size;
+  height          : @width;
+  width           : @height;
   background-color: currentColor;
   mask-image      : url(@url);
   mask-repeat     : no-repeat;
   mask-size       : contain;
 }
+
+
 
 .owl-nav-big() {
   @media (min-width: 1160px) {

@@ -413,10 +413,21 @@ section {
   padding: 15px 0 15px 0;
 }
 .header__logo {
-  background: url("img/header/logo.png") no-repeat center / contain;
-  max-width: 183px;
+  display: inline-block;
+  height: 0.9em;
+  width: 0.9em;
+  background-color: currentColor;
+  -webkit-mask-image: url("img/common/logo.svg");
+          mask-image: url("img/common/logo.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  color: #970000;
+  max-width: 240px;
+  max-height: 50px;
   width: calc(0.17 * var(--container-width));
-  height: 36px;
+  height: calc(0.034 * var(--container-width));
 }
 @media (max-width: 700px) {
   .header__logo {
@@ -532,12 +543,12 @@ section {
   width: 90%;
   --container-width: 90vw;
   background-color: #F2F2F2;
-  padding: calc(0.05 * var(--container-width)) calc(0.08 * var(--container-width)) 0 calc(0.08 * var(--container-width));
+  padding: calc(0.05 * var(--container-width)) calc(0.05 * var(--container-width)) 0 calc(0.05 * var(--container-width));
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  grid-template-rows: 98px minmax(60px, auto) auto;
-  grid-row-gap: 23px;
-  grid-column-gap: 5%;
+  grid-template-columns: calc(0.34 * var(--container-width)) minmax(1fr, calc(0.36 * var(--container-width)), minmax(98px, auto) minmax(60px, auto)) auto;
+  grid-template-rows: calc(0.12 * var(--container-width));
+  grid-row-gap: 0;
+  grid-column-gap: 23px;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -568,10 +579,11 @@ section {
 .subscribe-first__img {
   grid-row: span 3;
   grid-column: 2;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: calc(0.4 * var(--container-width));
   z-index: 10;
   box-shadow: -10px 10px 30px #636363;
+  align-self: end;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__img {
@@ -600,6 +612,7 @@ section {
   grid-column-gap: 10px;
   justify-self: start;
   row-gap: 30px;
+  align-self: start;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__button__container {
@@ -620,10 +633,12 @@ section {
 }
 .subscribe-first__text {
   align-self: start;
+  max-width: 384px;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__text {
     text-align: center;
+    margin: auto;
   }
 }
 .subscribe-first__small-text {
@@ -641,7 +656,7 @@ section {
   border-radius: 50%;
   position: absolute;
   top: 33px;
-  left: 50%;
+  left: 44.6%;
   z-index: 1;
 }
 @media only screen and (max-width: 1040px) {
@@ -712,7 +727,7 @@ section {
 .choose__month,
 .choose__year {
   background-color: #F2F2F2;
-  padding: calc(0.04 * var(--container-width)) calc(0.05 * var(--container-width)) calc(0.04 * var(--container-width)) calc(0.05 * var(--container-width));
+  padding: calc(0.05 * var(--container-width)) calc(0.05 * var(--container-width)) calc(0.05 * var(--container-width)) calc(0.05 * var(--container-width));
 }
 @media only screen and (max-width: 1040px) {
   .choose__month,
@@ -773,6 +788,17 @@ section {
 .choose__year__text {
   padding-top: 25px;
 }
+.choose__year__text,
+.choose__year__title {
+  max-width: 384px;
+}
+@media only screen and (max-width: 1040px) {
+  .choose__year__text,
+  .choose__year__title {
+    text-align: center;
+    margin: auto;
+  }
+}
 .pluses {
   background-color: #F2F2F2;
   padding: 133px 0 133px 0;
@@ -797,7 +823,7 @@ section {
   justify-items: center;
   text-align: center;
   background-color: white;
-  padding: calc(0.033 * var(--container-width)) calc(0.05 * var(--container-width)) 0 calc(0.05 * var(--container-width));
+  padding: calc(0.03 * var(--container-width)) calc(0.035 * var(--container-width)) 0 calc(0.035 * var(--container-width));
 }
 @media only screen and (max-width: 1040px) {
   .pluses__item {
@@ -832,7 +858,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: var(--h2-size) auto;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: calc(0.01 * var(--container-width));
   grid-column-gap: 2%;
 }
 @media only screen and (max-width: 1040px) {
@@ -907,6 +933,55 @@ section {
   background-color: #989898;
   width: 100%;
   min-height: 50px;
+}
+.footer__line {
+  grid-column: span 3;
+  border-top: 2px solid #C4C4C4;
+  width: 100%;
+  height: 0.5px;
+}
+.footer__container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 90%;
+  --container-width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(-webkit-max-content, 1fr));
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  grid-template-rows: calc(0.145 * var(--container-width)) 0.5px calc(0.057 * var(--container-width));
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  justify-items: center;
+  align-items: center;
+}
+@media only screen and (min-width: 1040px) {
+  .footer__container {
+    width: 85%;
+    --container-width: 85vw;
+  }
+}
+@media only screen and (min-width: 1401px) {
+  .footer__container {
+    width: 70%;
+    --container-width: 70vw;
+  }
+}
+.footer__logo {
+  background: url("img/common/logo.svg") no-repeat center / contain;
+  max-width: 240px;
+  width: calc(0.17 * var(--container-width));
+  height: calc(0.034 * var(--container-width));
+}
+@media (max-width: 700px) {
+  .footer__logo {
+    width: 101px;
+    height: 21px;
+  }
+}
+.footer__small-text {
+  color: white;
+  font-size: var(--font-size);
+  text-decoration: none;
 }
 @media (min-width: 701px) {
   .m-show {
