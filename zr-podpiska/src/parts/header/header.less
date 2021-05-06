@@ -88,6 +88,8 @@ color: @black;
     border-bottom: 2px solid @dark_red;
   }
 
+ 
+
   &__bottom {
     .grid(1fr, repeat(4, 2em) 50px, 10px, 20px);
     position   : fixed;
@@ -101,21 +103,39 @@ color: @black;
     padding-bottom: 10vh;
     z-index    : 20;
     justify-items: center;
-    box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.445) ;
+    
 
     &  .zr-button div,  &  .zr-button span { color: @white;}
+
+
+    
+ &__overlay{
+    position   : fixed;
+    top        : 0;
+    left       : 0;
+    right      : 0;
+    bottom:0;
+    z-index    : 10;
+    background-color: rgba(0, 0, 0, 0.445) ;
+   
+  }
+
+  
+  .header__bottom.m-hide + &__overlay{
+    display: none;
+  }
   }
 
   &__cross {
     display: block;
-    width: 16vw;
-    height: 16vw;
+    width: @cross_size;
+    height: @cross_size;
     .bg-contain('img/common/X.svg');
     filter: drop-shadow(0.1em 0.1em 4px black) ;
    
     position      : absolute;
-    top           : -18vw;
-    left          : 37vw;
+    top           : -@cross_size*2;
+    left          : ~"calc( 50% - " @cross_size ~"/2) ";
     color: white;
     font-family   : 'HelveticaNavCyr', sans-serif;
     font-size     : 24px;

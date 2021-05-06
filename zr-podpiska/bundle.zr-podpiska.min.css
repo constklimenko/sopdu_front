@@ -515,21 +515,32 @@ section {
   padding-bottom: 10vh;
   z-index: 20;
   justify-items: center;
-  box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.445);
 }
 .header__bottom .zr-button div,
 .header__bottom .zr-button span {
   color: white;
 }
+.header__bottom__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+.header__bottom.m-hide + .header__bottom__overlay {
+  display: none;
+}
 .header__cross {
   display: block;
-  width: 16vw;
-  height: 16vw;
+  width: 33px;
+  height: 33px;
   background: url('img/common/X.svg') no-repeat center / contain;
   filter: drop-shadow(0.1em 0.1em 4px black);
   position: absolute;
-  top: -18vw;
-  left: 37vw;
+  top: -66px;
+  left: calc( 50% -  33px /2) ;
   color: white;
   font-family: 'HelveticaNavCyr', sans-serif;
   font-size: 24px;
@@ -1057,6 +1068,72 @@ section {
   font-size: var(--font-size);
   text-decoration: none;
   justify-self: center;
+}
+.index-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+.index-modal__container {
+  position: fixed;
+  top: 22vh;
+  left: calc(50vw - 383px);
+  right: calc(50vw - 383px);
+  z-index: 20;
+  background: white;
+  height: auto;
+  z-index: 30;
+}
+.index-modal__header {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, -webkit-max-content) 4fr;
+  grid-template-columns: repeat(3, max-content) 4fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+}
+.index-modal__header__old-price,
+.index-modal__header__price,
+.index-modal__header__title {
+  justify-self: center;
+  align-self: center;
+  padding-right: 21px;
+}
+.index-modal__header__price {
+  font-size: var(--h2-size);
+  font-weight: bold;
+}
+.index-modal__header__old-price {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  font-size: 20px;
+}
+.index-modal__button {
+  justify-self: end;
+}
+.index-modal__img {
+  width: 259px;
+}
+.index-modal__cross {
+  display: block;
+  width: 33px;
+  height: 33px;
+  background: url('img/common/X.svg') no-repeat center / contain;
+  filter: drop-shadow(0.1em 0.1em 4px black);
+  position: absolute;
+  top: -66px;
+  left: calc( 50% -  33px /2) ;
+  color: white;
+  font-family: 'HelveticaNavCyr', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4em;
+  cursor: pointer;
 }
 @media (min-width: 701px) {
   .m-show {

@@ -18,6 +18,7 @@ header.header
   
       
     .header__bottom.m-show.m-hide
+      
       a.header__link
         .header__logo(href="/") 
       a.header__link(href="") Оформление подписки
@@ -26,6 +27,7 @@ header.header
       a.header__in.zr-button(href="")
         .header__in__img  ddd
         span.header__in__text Вход 
-      .header__cross.m-show(onclick="toggleNav()") 
+      .header__cross.m-show(onclick="toggleNav()")
+    .header__bottom__overlay 
     script
         include toggle_header.js
