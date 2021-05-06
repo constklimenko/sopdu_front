@@ -966,6 +966,16 @@ section {
     --container-width: 70vw;
   }
 }
+@media (max-width: 700px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    row-gap: 11px;
+    padding-bottom: 11px;
+  }
+}
 .footer__logo {
   background: url("img/common/logo.svg") no-repeat center / contain;
   max-width: 240px;
@@ -978,10 +988,73 @@ section {
     height: 21px;
   }
 }
+.footer__social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  width: 163px;
+  margin: auto;
+}
+.footer__social__icon {
+  color: white;
+  justify-self: center;
+}
+.footer__social__icon.insta {
+  display: inline-block;
+  height: 39px;
+  width: 39px;
+  background-color: currentColor;
+  -webkit-mask-image: url('img/common/insta.svg');
+          mask-image: url('img/common/insta.svg');
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.footer__social__icon.vk {
+  display: inline-block;
+  height: 39px;
+  width: 39px;
+  background-color: currentColor;
+  -webkit-mask-image: url('img/common/vk.svg');
+          mask-image: url('img/common/vk.svg');
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.footer__social__icon.youtube {
+  display: inline-block;
+  height: 39px;
+  width: 39px;
+  background-color: currentColor;
+  -webkit-mask-image: url('img/common/youtube.svg');
+          mask-image: url('img/common/youtube.svg');
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
 .footer__small-text {
   color: white;
   font-size: var(--font-size);
   text-decoration: none;
+}
+.footer__links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+}
+.footer__links__link {
+  color: white;
+  font-size: var(--font-size);
+  text-decoration: none;
+  justify-self: center;
 }
 @media (min-width: 701px) {
   .m-show {
