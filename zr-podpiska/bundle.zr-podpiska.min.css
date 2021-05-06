@@ -589,6 +589,8 @@ section {
   .subscribe-first__img {
     grid-column: 1;
     grid-row: 4;
+    width: 100%;
+    height: auto;
     max-width: 224px;
     justify-self: center;
   }
