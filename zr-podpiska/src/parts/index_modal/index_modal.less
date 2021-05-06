@@ -1,0 +1,75 @@
+.index-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.445);
+
+    &__container {
+
+        position: fixed;
+        top: 22vh;
+        left: calc(50vw - 383px);
+        right: calc(50vw - 383px);
+        z-index: 20;
+        background: white;
+        height: auto;
+
+        z-index: 30;
+
+    }
+
+    &__header {
+        padding: 30px;
+        .grid(repeat(3, max-content) 4fr);
+
+        &__old-price,&__price,&__title,{
+            justify-self: center;
+            align-self: center;
+            padding-right: 21px;
+}
+
+        &__title {}
+
+        &__price {
+            font-size: @h2-size;
+            font-weight: bold;
+        }
+
+        &__old-price {
+            text-decoration-line: line-through;
+            font-size: 20px;
+        }
+
+
+    }
+
+    &__button {
+        justify-self: end;
+    }
+
+    &__img{
+        width: 259px;
+    }
+
+    &__cross {
+        display: block;
+
+        width: @cross_size;
+        height: @cross_size;
+        .bg-contain('img/common/X.svg');
+        filter: drop-shadow(0.1em 0.1em 4px black);
+
+        position: absolute;
+        top: -@cross_size*2;
+        left: ~"calc( 50% - "@cross_size ~"/2) ";
+        color: white;
+        font-family: 'HelveticaNavCyr', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.4em;
+        cursor: pointer;
+    }
+}
