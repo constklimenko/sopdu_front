@@ -38,11 +38,13 @@
   }
   
   &__month{
-    .grid(1fr, @h2-size);
+    .grid(1fr, 1em @h2-size 1em  auto, 0,10px);
     align-items: center;
     justify-items: center;
 
-    
+    &__title{
+      color: @gray_04;
+    }
     
     &__old-price,&__price,&__little-text,&__button{
       grid-column: 1;
@@ -64,6 +66,13 @@
     }
     &__little-text{
       align-self: start;
+      cursor: pointer;
+      color: @gray_03;
+      
+    }
+
+    &__little-text:hover{
+      color: @light_red !important;
     }
     
     
