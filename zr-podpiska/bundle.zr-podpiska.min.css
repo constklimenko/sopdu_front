@@ -1004,6 +1004,7 @@ section {
 .footer__logo {
   background: url("img/common/logo.svg") no-repeat center / contain;
   max-width: 240px;
+  color: white;
   width: calc(0.17 * var(--container-width));
   height: calc(0.034 * var(--container-width));
 }
