@@ -440,6 +440,9 @@ section {
   text-decoration: none;
   color: black;
 }
+.header__link:hover {
+  text-decoration: none;
+}
 @media (max-width: 700px) {
   .header__link {
     order: 2;
@@ -752,11 +755,14 @@ section {
 .choose__month {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: var(--h2-size);
-  grid-row-gap: 0;
+  grid-template-rows: 1em var(--h2-size) 1em auto;
+  grid-row-gap: 10px;
   grid-column-gap: 0;
   align-items: center;
   justify-items: center;
+}
+.choose__month__title {
+  color: #636363;
 }
 .choose__month__old-price,
 .choose__month__price,
@@ -778,6 +784,11 @@ section {
 }
 .choose__month__little-text {
   align-self: start;
+  cursor: pointer;
+  color: #989898;
+}
+.choose__month__little-text:hover {
+  color: #BD5555 !important;
 }
 .choose__year {
   display: grid;
@@ -871,8 +882,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: var(--h2-size) auto;
-  grid-row-gap: calc(0.01 * var(--container-width));
-  grid-column-gap: 2%;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: calc(0.01 * var(--container-width));
 }
 @media only screen and (max-width: 1040px) {
   .pluses .block-container {
@@ -1079,7 +1090,7 @@ section {
   background-color: rgba(0, 0, 0, 0.445);
 }
 .index-modal__container {
-  position: fixed;
+  position: absolute;
   top: 22vh;
   left: calc(50vw - 383px);
   right: calc(50vw - 383px);
@@ -1087,8 +1098,6 @@ section {
   background: white;
   height: auto;
   z-index: 30;
-}
-.index-modal__header {
   padding: 30px;
   display: grid;
   grid-template-columns: repeat(3, -webkit-max-content) 4fr;
@@ -1097,6 +1106,40 @@ section {
   grid-row-gap: 0;
   grid-column-gap: 0;
 }
+.index-modal__container__button {
+  justify-self: end;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__container__button {
+    grid-row: 4;
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
+.index-modal__container ul {
+  padding-left: 20px;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    top: 96px;
+    left: 5%;
+    right: 5%;
+    padding: 20px;
+  }
+}
+.index-modal__content {
+  grid-column: span 4;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__content {
+    grid-column: span 2;
+  }
+}
 .index-modal__header__old-price,
 .index-modal__header__price,
 .index-modal__header__title {
@@ -1104,20 +1147,65 @@ section {
   align-self: center;
   padding-right: 21px;
 }
+.index-modal__header__title {
+  color: #989898;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__header__title {
+    grid-row: 1/3;
+    justify-self: left;
+    align-self: end;
+    font-size: 30px;
+  }
+}
 .index-modal__header__price {
   font-size: var(--h2-size);
   font-weight: bold;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__header__price {
+    grid-column: 2/3;
+    justify-self: right;
+    font-size: 30px;
+    padding-right: 0;
+  }
 }
 .index-modal__header__old-price {
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
   font-size: 20px;
 }
-.index-modal__button {
-  justify-self: end;
+@media only screen and (max-width: 1040px) {
+  .index-modal__header__old-price {
+    grid-column: 2/3;
+    justify-self: right;
+    font-size: 14px;
+    padding-right: 0;
+  }
 }
 .index-modal__img {
   width: 259px;
+  height: 182px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  --bg-x: 0px;
+  --bg-y: 27px;
+  --bg-size: 100%;
+  background-image: url('img/index_modal/mag.png');
+  background-repeat: no-repeat;
+  background-position: var(--bg-x) var(--bg-y);
+  background-size: var(--bg-size);
+}
+.index-modal__img__title {
+  color: #970000;
+  text-align: right;
+  padding-right: 0.5em;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__img {
+    display: none;
+  }
 }
 .index-modal__cross {
   display: block;
@@ -1149,4 +1237,7 @@ section {
   .t-hide {
     display: none!important;
   }
+}
+.hide {
+  display: none!important;
 }
