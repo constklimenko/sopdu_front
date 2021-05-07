@@ -149,6 +149,7 @@ body {
   --return2: calc((100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
   --font-size: var(--return2);
   --block-gap: 78px;
+  --cross-size: 33px;
 }
 @media screen and (max-width: 320px) {
   body {
@@ -537,13 +538,13 @@ section {
 }
 .header__cross {
   display: block;
-  width: 33px;
-  height: 33px;
+  width: 33;
+  height: 33;
   background: url('img/common/X.svg') no-repeat center / contain;
   filter: drop-shadow(0.1em 0.1em 4px black);
   position: absolute;
-  top: -66px;
-  left: calc( 50% -  33px /2) ;
+  top: -66;
+  left: calc( 50% -  33 /2) ;
   color: white;
   font-family: 'HelveticaNavCyr', sans-serif;
   font-size: 24px;
@@ -1126,10 +1127,10 @@ section {
     grid-template-rows: 1fr;
     grid-row-gap: 0;
     grid-column-gap: 0;
-    top: 96px;
+    top: 10vh;
     left: 5%;
     right: 5%;
-    padding: 20px;
+    padding: 6vw;
   }
 }
 .index-modal__content {
@@ -1209,19 +1210,25 @@ section {
 }
 .index-modal__cross {
   display: block;
-  width: 33px;
-  height: 33px;
+  width: var(--cross-size);
+  height: var(--cross-size);
   background: url('img/common/X.svg') no-repeat center / contain;
   filter: drop-shadow(0.1em 0.1em 4px black);
   position: absolute;
-  top: -66px;
-  left: calc( 50% -  33px /2) ;
+  top: calc(var(--cross-size) * -2);
+  left: calc( 50% - var(--cross-size)/2) ;
   color: white;
   font-family: 'HelveticaNavCyr', sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.4em;
   cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .index-modal__cross {
+    --cross-size: 4vh;
+    top: calc(var(--cross-size) * -1.5);
+  }
 }
 @media (min-width: 701px) {
   .m-show {

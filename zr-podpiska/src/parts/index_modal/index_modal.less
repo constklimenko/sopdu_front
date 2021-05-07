@@ -37,10 +37,10 @@
 
         @media only screen and (max-width: @size-tablete) {
             .grid(1fr, 1fr);
-            top: 96px;
+            top: 10vh;
         left: 5%;
         right: 5%;
-        padding: 20px;
+        padding: 6vw;
           }
 
     }
@@ -123,19 +123,27 @@
     &__cross {
         display: block;
 
-        width: @cross_size;
-        height: @cross_size;
+        width: var(--cross-size);
+        height: var(--cross-size);
         .bg-contain('img/common/X.svg');
         filter: drop-shadow(0.1em 0.1em 4px black);
 
         position: absolute;
-        top: -@cross_size*2;
-        left: ~"calc( 50% - "@cross_size ~"/2) ";
+        top:  calc( var(--cross-size) * -2);
+        left: ~"calc( 50% - var(--cross-size)/2) ";
         color: white;
         font-family: 'HelveticaNavCyr', sans-serif;
         font-size: 24px;
         font-weight: 600;
         line-height: 1.4em;
         cursor: pointer;
+
+
+        @media only screen and (max-width: @size-tablete){
+            --cross-size: 4vh;
+            top:  calc( var(--cross-size) * -1.5);
+        }
     }
+
+    
 }
