@@ -1,25 +1,52 @@
-.index-modal
-    ._container 
-        ._header
-            ._header__title Год
-            ._header__old-price 8000
-            ._header__price 4999 
-        
-            a(href="http://")._button.zr-button Оформить подписку
-        ._content
-            ._title 
-            ul._ul 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-                li._li 
-            ._img
-        ._cross(onclick="toggleModal()") 
+#modal-1.hide.index-modal
+    .index-modal__container         
+        .index-modal__header__title 1 месяц
+        .index-modal__header__old-price 1000&nbsp;₽
+        .index-modal__header__price 500&nbsp;₽     
+        a(href="http://")._button.zr-button Оформить подписку
+        .index-modal__content
+            .index-modal__title 
+            ul.index-modal__ul 
+                li.index-modal__li Эксклюзивную версию журнала
+                li.index-modal__li Уведомление о выходе новой версии
+                li.index-modal__li Материалы о построении машин из всех проверенных источников
+                li.index-modal__li Новости в индустрии машиностроения 
+                li.index-modal__li Эксклюзивное интервью с известными личностями
+                li.index-modal__li Прогнозы на будущее на авто рынке
+                li.index-modal__li Эксклюзивную версию журнала
+                li.index-modal__li Уведомление о выходе новой версии
+                li.index-modal__li Материалы о построении машин из всех проверенных источников
+                li.index-modal__li Новости в индустрии машиностроения 
+                li.index-modal__li Эксклюзивное интервью с известными личностями
+                li.index-modal__li Прогнозы на будущее на авто рынке
+            .index-modal__img  
+                ._title 12 журналов за год
+        .index-modal__cross(onclick="toggleModal('#modal-1')") 
+
+
+#modal-2.hide.index-modal
+    .index-modal__container 
+        .index-modal__header__title Год
+        .index-modal__header__old-price 8000&nbsp;₽
+        .index-modal__header__price 4999&nbsp;₽     
+        a(href="http://")._button.zr-button Оформить подписку
+        .index-modal__content
+            .index-modal__title 
+            ul.index-modal__ul 
+                li.index-modal__li Эксклюзивную версию журнала
+                li.index-modal__li Уведомление о выходе новой версии
+                li.index-modal__li Материалы о построении машин из всех проверенных источников
+                li.index-modal__li Новости в индустрии машиностроения 
+                li.index-modal__li Эксклюзивное интервью с известными личностями
+                li.index-modal__li Прогнозы на будущее на авто рынке
+                li.index-modal__li Эксклюзивную версию журнала
+                li.index-modal__li Уведомление о выходе новой версии
+                li.index-modal__li Материалы о построении машин из всех проверенных источников
+                li.index-modal__li Новости в индустрии машиностроения 
+                li.index-modal__li Эксклюзивное интервью с известными личностями
+                li.index-modal__li Прогнозы на будущее на авто рынке
+            .index-modal__img  
+                ._title 12 журналов за год
+        .index-modal__cross(onclick="toggleModal('#modal-2')") 
+//- script
+//-         include toggle_modal.js
