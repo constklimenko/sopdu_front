@@ -22,11 +22,13 @@
 }
 
 .header{
-  background-color: @gray_01;
+  background-color: #F2F2F262;
+  backdrop-filter: blur(4px);
   position: sticky;
   top:0;
   z-index: 20;
   animation: turn_down @aniimation_time @aniimation_way;
+
   &__container{
     .flex-row();
     animation: turn_down2 @aniimation_time @aniimation_way  ;   

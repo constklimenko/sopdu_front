@@ -17,7 +17,8 @@
       .block-container();
       
       .grid(repeat(3, minmax( max-content, 1fr)), calc( 0.145 * var(--container-width)) .5px calc( 0.057 * var(--container-width)));
-      justify-items: center;
+      justify-content: space-between;
+      
       align-items: center;
 
       @media (max-width: @size-mobile) {
@@ -26,10 +27,12 @@
       row-gap: 11px;
       padding-bottom: 11px;
       }
+
+     
     }
 
     &__logo{   
-      .bg-contain("img/common/logo.svg");
+      .bg-contain("img/common/logo_white.svg");
       max-width: 240px;
       color: white;
       width: calc( 0.17 * var(--container-width));
@@ -43,7 +46,9 @@
     &__social{
       .grid(1fr 1fr 1fr);
       width: 163px;
-      margin: auto;
+     
+      justify-self: end;
+
 
       &__icon{
         color: @white;
@@ -71,18 +76,33 @@
     }
 
     &__small-text{
+      text-align: center;
       color: @white;
       font-size: var(--font-size);
       text-decoration: none;
+      font-size: 17px;
+      line-height: 130%;
+      font-weight: normal;
+    }
+
+    &__small-text:last-child{ justify-self: end;
+      width: max-content;
+      }
+
+    a.footer__small-text{
+     text-align: start;
     }
 
     &__links{
       width: 100%;
       .grid(1fr 1fr 1fr);
+      font-weight: bold;
+
+line-height: 130%;
 
       &__link {
         color: @white;
-        font-size: var(--font-size);
+        font-size: 24px;
         text-decoration: none;
         justify-self: center;
       }
