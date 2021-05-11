@@ -4,6 +4,14 @@
   grid-template-rows   : @row;
   grid-row-gap         : @row-gap;
   grid-column-gap      : @col-gap;
+  row-gap         : @row-gap;
+  column-gap      : @col-gap;
+
+  @supports not (grid-row-gap: @row-gap){
+& > div, &> p, &>a {
+  margin-bottom: @row-gap;
+}
+  }
 }
 
 

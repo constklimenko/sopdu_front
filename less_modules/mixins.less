@@ -447,6 +447,12 @@
   mask-image      : url(@url);
   mask-repeat     : no-repeat;
   mask-size       : contain;
+
+
+  @supports not ( mask-image : url(@url) ){
+    background: url(@url) no-repeat /contain ;
+  }
+
 }
 
 
