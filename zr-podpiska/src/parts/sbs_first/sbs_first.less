@@ -40,8 +40,15 @@ margin-top: 50vh;
   grid-template-columns: calc( 0.34 * var(--container-width)) minmax(1fr,calc( 0.36 * var(--container-width)));
   grid-template-rows:  minmax(98px,auto) minmax(60px,auto) auto;
   
-  column-gap:  33px;
-  row-gap: 23px;
+  grid-column-gap:  33px;
+  grid-row-gap: 23px;
+
+  @supports not ( display: grid){
+    display: flex; 
+    flex-direction: row;
+    align-content: space-between;
+
+  }
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -82,7 +89,7 @@ margin-top: 50vh;
     grid-row   : 1;
     font-size  : @h2-size;
     line-height: 110%;
-    z-index: 10;
+    z-index: 12;
     margin-bottom: 0;
 
     @media only screen and (max-width: @size-tablete) {
@@ -94,6 +101,11 @@ margin-top: 50vh;
 
   &__button__container{
     .grid(1fr, 50px 16px, 10px,10px);
+    @supports not ( display: grid){
+      
+      flex-direction: column;
+      align-content: space-between;
+    }
     justify-self: start;
     row-gap: 10px;
     align-self: start;
@@ -119,7 +131,7 @@ margin-top: 50vh;
   &__text{
     align-self: start;
     max-width: 384px;
-
+z-index: 12;
     @media only screen and (max-width: @size-tablete) {
       text-align: center;
       margin: auto;
@@ -147,6 +159,11 @@ margin-top: 50vh;
     z-index: 1;
     transform-origin: bottom left;
     animation: turn_left @aniimation_time @aniimation_way ;
+
+    @supports not ( display: grid){
+      display: none; 
+      
+    }
 
     @media only screen and (max-width: @size-tablete) {
       width: 120vw;

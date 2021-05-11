@@ -20,6 +20,13 @@
         padding: 30px;
         .grid(repeat(3, max-content) 4fr);
 
+        @supports not ( display: grid){
+            display: flex; 
+            flex-direction: row;
+            align-content: space-between;
+            flex-wrap: wrap;
+          }
+
         &__button {
             justify-self: end;
 

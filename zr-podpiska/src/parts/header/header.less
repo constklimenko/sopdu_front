@@ -111,6 +111,12 @@ color: @black;
     @media (max-width: @size-mobile) {
       order: 1;
     }
+
+    @supports not ( display: grid){
+      display: flex; 
+      flex-direction: column;
+      align-content: space-between;
+    }
   }
 
   &__toggle__line {
@@ -122,6 +128,10 @@ color: @black;
 
   &__bottom {
     .grid(1fr, repeat(4, 2em) 50px, 10px, 20px);
+    @supports not ( display: grid){
+      flex-direction: column;
+      align-content: space-between;
+    }
     position   : fixed;
     top        : 126px;
     left       : 5%;

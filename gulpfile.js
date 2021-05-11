@@ -18,7 +18,7 @@ const ftp = require('vinyl-ftp');
 
 const pathName = 'zr-podpiska';
 const pathName_b = 'zr-podpiska';
-const pageName = "index";
+const pageName = "subscribe";
 let dot = '.';
 
 if (pathName == '.') {
@@ -34,7 +34,7 @@ const config = {
     path: {
         less: `${pathName}/src/*.less`,
         less2: `${pathName}/src/parts/**/*.less`,
-        html: `${pathName}/index.html`,
+        html: `${pathName}/${pageName}.html`,
         pug: `${pathName}/src/${pageName}.pug`,
         pug2: `${pathName}/src/parts/**/*.pug`,
 
@@ -42,7 +42,7 @@ const config = {
     output: {
         cssName: `bundle${dot}${pathName}${dot}min.css`,
         path: `${pathName}`,
-        path_file: `${pathName}/index.html`,
+        path_file: `${pathName}/${pageName}.html`,
         path_file_css: `${pathName}/${pathName}.css`,
         newHtml: `/tmp/fz3temp-2`,
         browser_path: `${pathName_b}`
