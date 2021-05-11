@@ -396,18 +396,60 @@ h2 {
 section {
   margin-top: var(--block-gap) !important;
 }
+@-webkit-keyframes turn_down {
+  from {
+    height: 0;
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+    height: 80px;
+  }
+}
+@keyframes turn_down {
+  from {
+    height: 0;
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+    height: 80px;
+  }
+}
+@-webkit-keyframes turn_down2 {
+  from {
+    transform: translateY(-80px);
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+@keyframes turn_down2 {
+  from {
+    transform: translateY(-80px);
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
 .header {
   background-color: #F2F2F2;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 20;
+  -webkit-animation: turn_down 1.3s ease-in;
+          animation: turn_down 1.3s ease-in;
 }
 .header__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-direction: row !important;
+  -webkit-animation: turn_down2 1.3s ease-in;
+          animation: turn_down2 1.3s ease-in;
   align-content: center;
   align-items: center;
   justify-content: space-between;
@@ -552,6 +594,46 @@ section {
   line-height: 1.4em;
   cursor: pointer;
 }
+@-webkit-keyframes turn_left {
+  from {
+    transform: rotateZ(90deg);
+    filter: opacity(0);
+  }
+  to {
+    transform: rotateZ(0deg);
+    filter: opacity(1);
+  }
+}
+@keyframes turn_left {
+  from {
+    transform: rotateZ(90deg);
+    filter: opacity(0);
+  }
+  to {
+    transform: rotateZ(0deg);
+    filter: opacity(1);
+  }
+}
+@-webkit-keyframes turn_up {
+  from {
+    margin-top: 50vh;
+    padding-top: 300px;
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+@keyframes turn_up {
+  from {
+    margin-top: 50vh;
+    padding-top: 300px;
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
 .subscribe-first {
   margin: 0 auto;
   max-width: 1100px;
@@ -568,6 +650,8 @@ section {
   overflow: hidden;
   position: relative;
   margin-top: 32px!important;
+  -webkit-animation: turn_up 1.3s ease-in;
+          animation: turn_up 1.3s ease-in;
 }
 @media only screen and (min-width: 1040px) {
   .subscribe-first {
@@ -599,6 +683,9 @@ section {
   z-index: 10;
   box-shadow: -10px 10px 30px #636363;
   align-self: end;
+  transform-origin: bottom left;
+  -webkit-animation: turn_left 1.3s ease-in;
+          animation: turn_left 1.3s ease-in;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__img {
@@ -675,6 +762,9 @@ section {
   top: 33px;
   left: 44.6%;
   z-index: 1;
+  transform-origin: bottom left;
+  -webkit-animation: turn_left 1.3s ease-in;
+          animation: turn_left 1.3s ease-in;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__circle {
@@ -1002,7 +1092,7 @@ section {
   }
 }
 .footer__logo {
-  background: url("img/common/logo.svg") no-repeat center / contain;
+  background: url("img/common/logo_white.svg") no-repeat center / contain;
   max-width: 240px;
   color: white;
   width: calc(0.17 * var(--container-width));

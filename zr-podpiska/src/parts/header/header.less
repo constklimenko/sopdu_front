@@ -1,12 +1,36 @@
+@keyframes  turn_down{
+  from{ height: 0;   
+        filter: opacity(0);    }
+    
+      to{        
+        filter: opacity(1);
+        height: 80px; 
+      }
+
+}
+
+@keyframes  turn_down2{
+
+  from{ 
+    transform: translateY(-80px); 
+    filter: opacity(0);    }
+
+  to{        
+    filter: opacity(1);
+  }
+
+}
+
 .header{
   background-color: @gray_01;
   position: sticky;
   top:0;
   z-index: 20;
+  animation: turn_down @aniimation_time @aniimation_way;
   &__container{
     .flex-row();
-  
-  
+    animation: turn_down2 @aniimation_time @aniimation_way  ;   
+ 
   align-content: center;
   align-items: center; 
   justify-content: space-between;
