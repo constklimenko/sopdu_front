@@ -35,7 +35,13 @@ margin-top: 50vh;
   .container-m();
   background-color: @gray_01;
   padding         : calc( 0.05 * var(--container-width)) calc( 0.05 * var(--container-width)) 0 calc( 0.05 * var(--container-width));
-  .grid(calc( 0.34 * var(--container-width)) minmax(1fr,calc( 0.36 * var(--container-width)), minmax(98px,auto) minmax(60px,auto)) auto, calc( 0.12 * var(--container-width)), 23px);
+  display: grid;
+  
+  grid-template-columns: calc( 0.34 * var(--container-width)) minmax(1fr,calc( 0.36 * var(--container-width)));
+  grid-template-rows:  minmax(98px,auto) minmax(60px,auto) auto;
+  
+  column-gap:  33px;
+  row-gap: 23px;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -77,6 +83,7 @@ margin-top: 50vh;
     font-size  : @h2-size;
     line-height: 110%;
     z-index: 10;
+    margin-bottom: 0;
 
     @media only screen and (max-width: @size-tablete) {
       text-align: center;
@@ -88,9 +95,11 @@ margin-top: 50vh;
   &__button__container{
     .grid(1fr, 50px 16px, 10px,10px);
     justify-self: start;
-    row-gap: 30px;
+    row-gap: 10px;
     align-self: start;
+    margin-top: 40px;
     @media only screen and (max-width: @size-tablete) {
+      margin-top: 17px;
       row-gap: 1rem;
       justify-self: center;
       width:75vw;

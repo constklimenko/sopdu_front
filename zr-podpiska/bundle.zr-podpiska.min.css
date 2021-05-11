@@ -649,10 +649,11 @@ section {
   background-color: #F2F2F2;
   padding: calc(0.05 * var(--container-width)) calc(0.05 * var(--container-width)) 0 calc(0.05 * var(--container-width));
   display: grid;
-  grid-template-columns: calc(0.34 * var(--container-width)) minmax(1fr, calc(0.36 * var(--container-width)), minmax(98px, auto) minmax(60px, auto)) auto;
-  grid-template-rows: calc(0.12 * var(--container-width));
-  grid-row-gap: 0;
-  grid-column-gap: 23px;
+  grid-template-columns: calc(0.34 * var(--container-width)) minmax(1fr, calc(0.36 * var(--container-width)));
+  grid-template-rows: minmax(98px, auto) minmax(60px, auto) auto;
+  -moz-column-gap: 33px;
+       column-gap: 33px;
+  row-gap: 23px;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -709,6 +710,7 @@ section {
   font-size: var(--h2-size);
   line-height: 110%;
   z-index: 10;
+  margin-bottom: 0;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__title {
@@ -722,11 +724,13 @@ section {
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   justify-self: start;
-  row-gap: 30px;
+  row-gap: 10px;
   align-self: start;
+  margin-top: 40px;
 }
 @media only screen and (max-width: 1040px) {
   .subscribe-first__button__container {
+    margin-top: 17px;
     row-gap: 1rem;
     justify-self: center;
     width: 75vw;
