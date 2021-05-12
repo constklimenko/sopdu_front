@@ -23,46 +23,28 @@ article.reg
             label
                 input.filled-in(type="checkbox", checked)
                 span  Оформить авто подписку
-        .date-picker 
-            ._row
-                ._row__header
-                    ._row__title 1 полугодие 2021
-                    ._row__price 1 000 ₽
-                ._row__months
-                    ._row__month Янв
-                    ._row__month Фев
-                    ._row__month Мар
-                    ._row__month.date-picker__row__month--active Апр
-                    ._row__month.date-picker__row__month--active Май
-                    ._row__month.date-picker__row__month--active Июн
-
-            ._row
-                ._row__header
-                    ._row__title 2 полугодие 2021
-                    ._row__price 3 000 ₽
-                ._row__months
-                    
-                    ._row__month.date-picker__row__month--active Июл
-                    ._row__month.date-picker__row__month--active Авг
-                    ._row__month.date-picker__row__month--active Сен
-                    ._row__month Окт
-                    ._row__month Ноя
-                    ._row__month Дек
-            ._row
-                ._row__header
-                    ._row__title 3 полугодие 2021
-                    ._row__price 6 000 ₽
-                ._row__months
-                    ._row__month Янв
-                    ._row__month Фев
-                    ._row__month Мар
-                    ._row__month Апр
-                    ._row__month Май
-                    ._row__month Июн
-            ._new-row Добавить полугодие (6 месяцев)
+        include date-picker.pug
 
         .promo-code 
             .input-field
                 input#promo1.validate(type="text")
                 label(for="promo1") Ввести промо код
+
+
+        include reg-contacts.pug
+        include reg-adress.pug
+
+        .promo-code 
+            .input-field
+                input#promo2.validate(type="text")
+                label(for="promo2") Ввести промо код
+
+        ._choose__month.choose__month
+            
+            ._choose__month__old-price.choose__month__old-price 1000
+            ._choose__month__price.choose__month__price 500&nbsp;₽
+            
+            a(href="http://").choose__month__button.zr-button Оформить подписку
+            .choose__month__little-text Нажимая кнопку “оформить подписку“ вы даете согласие на 
+                a(href="http://")  обработку персональных данных
 

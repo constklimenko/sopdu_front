@@ -21,6 +21,19 @@
 
 }
 
+
+@keyframes  fading_in{
+
+  from{ 
+    
+    filter: opacity(0);    }
+
+  to{        
+    filter: opacity(1);
+  }
+
+}
+
 .header{
   background-color: #F2F2F262;
   backdrop-filter: blur(4px);
@@ -144,6 +157,7 @@ color: @black;
     padding-bottom: 10vh;
     z-index    : 20;
     justify-items: center;
+    animation: fading_in 0.5s ease-in ;
     
 
     &  .zr-button div,  &  .zr-button span { color: @white;}

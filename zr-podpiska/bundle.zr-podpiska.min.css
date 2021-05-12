@@ -414,6 +414,11 @@ h2 {
     --container-width: 70vw;
   }
 }
+@media only screen and (min-width: 1100px) {
+  .block-container {
+    --container-width: 1100px;
+  }
+}
 section {
   margin-top: var(--block-gap) !important;
 }
@@ -454,6 +459,22 @@ section {
 @keyframes turn_down2 {
   from {
     transform: translateY(-80px);
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+@-webkit-keyframes fading_in {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+@keyframes fading_in {
+  from {
     filter: opacity(0);
   }
   to {
@@ -610,6 +631,8 @@ section {
   padding-bottom: 10vh;
   z-index: 20;
   justify-items: center;
+  -webkit-animation: fading_in 0.5s ease-in;
+          animation: fading_in 0.5s ease-in;
 }
 @supports not (grid-row-gap: 20px) {
   .header__bottom > div,
@@ -725,6 +748,11 @@ section {
   .subscribe-first {
     width: 70%;
     --container-width: 70vw;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .subscribe-first {
+    --container-width: 1100px;
   }
 }
 @supports not ( display: grid) {
@@ -909,6 +937,11 @@ section {
     --container-width: 70vw;
   }
 }
+@media only screen and (min-width: 1100px) {
+  .choose {
+    --container-width: 1100px;
+  }
+}
 @supports not (grid-row-gap: 1.5rem) {
   .choose > div,
   .choose > p,
@@ -954,7 +987,7 @@ section {
 .choose__month,
 .choose__year {
   background-color: #F2F2F2;
-  padding: calc(0.04 * var(--container-width)) calc(0.04 * var(--container-width)) calc(0.04 * var(--container-width)) calc(0.04 * var(--container-width));
+  padding: calc(0.045 * var(--container-width)) calc(0.045 * var(--container-width)) calc(0.045 * var(--container-width)) calc(0.045 * var(--container-width));
 }
 @media only screen and (max-width: 1040px) {
   .choose__month,
@@ -967,7 +1000,7 @@ section {
 .choose__month {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1em var(--h2-size) 1em auto;
+  grid-template-rows: 1em 1em var(--h2-size) 1em 49px 1em;
   grid-row-gap: 10px;
   grid-column-gap: 0;
   row-gap: 10px;
@@ -1018,12 +1051,20 @@ section {
 .choose__month__little-text {
   align-self: start;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 150%;
+  text-align: center;
+}
+.choose__month__little-text > a {
+  font-size: inherit;
+  text-decoration: none;
+  color: #989898;
+  cursor: pointer;
 }
 .choose__month a.choose__month__little-text {
   cursor: pointer;
   color: #989898;
+  font-size: 18px;
 }
 .choose__month a.choose__month__little-text:hover {
   color: #BD5555 !important;
@@ -1199,6 +1240,11 @@ section {
     --container-width: 70vw;
   }
 }
+@media only screen and (min-width: 726px) {
+  .questions {
+    --container-width: 726px;
+  }
+}
 @supports not (grid-row-gap: 20px) {
   .questions > div,
   .questions > p,
@@ -1285,6 +1331,11 @@ section {
   .footer__container {
     width: 70%;
     --container-width: 70vw;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .footer__container {
+    --container-width: 1100px;
   }
 }
 @supports not (grid-row-gap: 0) {
@@ -1630,6 +1681,11 @@ section {
     --container-width: 70vw;
   }
 }
+@media only screen and (min-width: 539px) {
+  .reg {
+    --container-width: 539px;
+  }
+}
 .reg__subtitle {
   font-size: 1rem;
 }
@@ -1643,6 +1699,7 @@ section {
   color: white;
   padding: calc(32px - 1rem) 1rem 0 1rem;
   margin-bottom: 10px;
+  margin-top: 50px;
   text-align: center;
 }
 @media only screen and (max-width: 700px) {
@@ -1672,18 +1729,24 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-row-gap: 0;
-    grid-column-gap: 0;
-    row-gap: 0;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+    row-gap: 0px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
-  @supports not (grid-row-gap: 0) {
+  @supports not (grid-row-gap: 0px) {
     .reg__form > div,
     .reg__form > p,
     .reg__form > a {
-      margin-bottom: 0;
+      margin-bottom: 0px;
     }
+  }
+  .reg__form > p,
+  .reg__form > div,
+  .reg__form > a,
+  .reg__form > input {
+    margin-bottom: 20px;
   }
 }
 .reg__form__checkbox {
@@ -1694,11 +1757,27 @@ section {
     grid-column: 1;
   }
 }
+.reg__choose__month {
+  grid-column: span 2;
+  box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.15);
+  grid-template-rows: 1em var(--h2-size) auto;
+  padding: 30px calc(0.21 * var(--container-width)) 35px calc(0.21 * var(--container-width));
+}
+@media only screen and (max-width: 1040px) {
+  .reg__choose__month {
+    grid-column: 1;
+  }
+}
 .reg .promo-code {
   grid-column: span 2;
   background-color: #F2F2F2;
   width: 100%;
   padding: 0 1rem 0 1rem;
+}
+@media only screen and (max-width: 1040px) {
+  .reg .promo-code {
+    grid-column: 1;
+  }
 }
 .date-picker {
   background-color: #F2F2F2;
@@ -1745,7 +1824,7 @@ section {
   align-content: space-between;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-  grid-template-rows: 50px;
+  grid-template-rows: 1fr;
   grid-row-gap: 9.87px;
   grid-column-gap: 9.87px;
   row-gap: 9.87px;
@@ -1770,6 +1849,7 @@ section {
   line-height: 130%;
   color: #636363;
   border-radius: 5px;
+  height: 50px;
 }
 .date-picker__row__month--active {
   background-color: #970000;

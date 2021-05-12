@@ -50,12 +50,20 @@ const config = {
     }
 };
 
-gulp.task('pages', function() {
+gulp.task('page', function() {
     return gulp.src(config.path.pug)
         .pipe(pug({
             plugins: [pugbem]
         }))
         .pipe(gulp.dest(`./${pathName}/`));
+});
+
+gulp.task('pages', function() {
+    return gulp.src(config.path.pug2)
+        .pipe(pug({
+            plugins: [pugbem]
+        }))
+        .pipe(gulp.dest(`./${pathName}/src/parts/`));
 });
 
 
@@ -109,4 +117,4 @@ const globs = [
 
 
 
-gulp.task('default', gulp.series('less', 'pages', 'serve'));
+gulp.task('default', gulp.series('less','page',  'serve'));
