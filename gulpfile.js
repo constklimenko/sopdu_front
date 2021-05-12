@@ -18,8 +18,8 @@ const ftp = require('vinyl-ftp');
 
 const pathName = 'zr-podpiska';
 const pathName_b = 'zr-podpiska';
-// const pageName = "subscribe";
-const pageName = "index";
+const pageName = "subscribe";
+// const pageName = "index";
 let dot = '.';
 
 if (pathName == '.') {
