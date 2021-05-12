@@ -1,0 +1,68 @@
+article.reg 
+    .reg__alert Заполните поля обозначенные красным
+    h1._title Оформление подписки
+    ._subtitle Если вы ранее уже оформляли подписку на нашем сайте, то войдите в 
+        a._subtitle(href="http://")  Личный&nbsp;кабинет
+    h3._form__title 
+    form(action="", method="post")._form
+        .input-field
+            select
+                option(value, disabled, selected) Выберите период
+                option(value) 6 месяцев
+                option(value ) 12 месяцев
+                option(value) 24 месяца
+            label Период подписки
+        .input-field
+            select.icons
+                option(value, disabled, selected) Выберите количество
+                option.left(value) 1 штука
+                option.left(value ) 2 штуки
+                option.left(value) 3 штуки
+            label Количество
+        p._form__checkbox
+            label
+                input.filled-in(type="checkbox", checked)
+                span  Оформить авто подписку
+        .date-picker 
+            ._row
+                ._row__header
+                    ._row__title 1 полугодие 2021
+                    ._row__price 1 000 ₽
+                ._row__months
+                    ._row__month Янв
+                    ._row__month Фев
+                    ._row__month Мар
+                    ._row__month.date-picker__row__month--active Апр
+                    ._row__month.date-picker__row__month--active Май
+                    ._row__month.date-picker__row__month--active Июн
+
+            ._row
+                ._row__header
+                    ._row__title 2 полугодие 2021
+                    ._row__price 3 000 ₽
+                ._row__months
+                    
+                    ._row__month.date-picker__row__month--active Июл
+                    ._row__month.date-picker__row__month--active Авг
+                    ._row__month.date-picker__row__month--active Сен
+                    ._row__month Окт
+                    ._row__month Ноя
+                    ._row__month Дек
+            ._row
+                ._row__header
+                    ._row__title 3 полугодие 2021
+                    ._row__price 6 000 ₽
+                ._row__months
+                    ._row__month Янв
+                    ._row__month Фев
+                    ._row__month Мар
+                    ._row__month Апр
+                    ._row__month Май
+                    ._row__month Июн
+            ._new-row Добавить полугодие (6 месяцев)
+
+        .promo-code 
+            .input-field
+                input#promo1.validate(type="text")
+                label(for="promo1") Ввести промо код
+

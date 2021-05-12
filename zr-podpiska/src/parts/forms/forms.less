@@ -1,0 +1,43 @@
+@import (reference)  "../materialize.css";
+
+
+.input-field{
+
+    
+    position: relative;
+    
+        & ul{
+            padding-left: 0;
+            top: 7px!important;
+        }
+        & li{
+            list-style: none;
+        }
+    }
+    
+    .select-wrapper + label{
+        .Description;
+    }
+    
+    
+    .dropdown-content li > span{
+        .Subhead;
+        color: @gray_04;
+    }
+
+    .select-wrapper input.select-dropdown{
+        font-weight: 700;
+        color: @gray_04;
+    }
+
+    
+
+    [type="checkbox"].filled-in:checked + span:not(.lever):after {
+        border: 2px solid @gray_03;
+    background-color: @white;
+    }
+
+    [type="checkbox"].filled-in:checked + span:not(.lever):before{
+        border-right: 2px solid @gray_03;
+    border-bottom: 2px solid @gray_03;
+    }

@@ -1,0 +1,121 @@
+.reg {
+    .container-m(539px);
+
+    &__subtitle {
+        font-size: 1rem;
+    }
+
+    &__alert {
+
+        .box-shadow;
+        .Subhead;
+        background: #970000;
+        height: 64px;
+        color: white;
+        padding: calc(32px - 1rem) 1rem 0 1rem;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media only screen and (max-width: @size-mobile) {
+            padding-top: 0.5rem;
+        }
+    }
+
+
+    &__form {
+
+        .grid(1fr 1fr, auto, 20px,20px);
+
+        @media only screen and (max-width: @size-tablete) {
+            .grid(1fr);
+        }
+
+        &__checkbox {
+
+            .grid-col-span();
+
+            @media only screen and (max-width: @size-tablete) {
+                grid-column: 1;
+            }
+        }
+
+
+    }
+
+    & .promo-code{
+        .grid-col-span;
+        background-color: @gray_01;
+        width: 100%;
+
+padding: 0 1rem 0 1rem;
+    }
+
+
+
+
+}
+
+.date-picker {
+    background-color: @gray_01;
+    .grid-col-span();
+    padding: 26px;
+
+    @media only screen and (max-width: @size-tablete) {
+        grid-column: 1;
+    }
+
+    &__new-row{
+        .Subhead;
+        color: @gray_04;
+        text-align: center
+    }
+
+    &__row{
+
+        .flex-column;
+        
+        &__header{
+            .flex-row;
+            width:100%;
+            align-content: space-between;
+            
+            .Subhead;
+            margin-bottom: 15px;
+
+            
+        }
+
+        &__price{
+            color: @gray_04;
+            padding-left: 22px
+        }
+
+        &__months{
+            .flex-row;
+            width:100%;
+            align-content: space-between;
+            .grid(repeat(auto-fill, minmax(72px, 1fr)), 50px,9.87px, 9.87px);
+            margin-bottom: 15px;
+        }
+
+        &__month{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 9px 20px;
+            .Description;
+            color: @gray_04;
+            border-radius: 5px;
+
+            &--active{
+                background-color: @dark_red;
+                color: @white;
+            }
+        }
+
+       
+
+    }
+
+}

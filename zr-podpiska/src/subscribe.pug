@@ -3,11 +3,14 @@ head
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width,initial-scale=1")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
-  link(rel="stylesheet", href="bundle.zr-podpiska.min.css")  
-  title Главная
+  link(rel="stylesheet", href="materialize-css/css/materialize-cut.css") 
+  link(rel="stylesheet", href="bundle.zr-podpiska.min.css") 
+   
+  title Выбрать свою подписку
     
 body
   include parts/header/header.pug
+  include parts/reg/reg.pug
   include parts/footer/footer.pug
     //-   include parts/sbs_first/sbs_first.pug
     //-   include parts/sbs_choose/sbs_choose.pug
@@ -15,7 +18,10 @@ body
     //-   include parts/questions/questions.pug
     
     //-   include parts/index_modal/index_modal.pug
-
-//-   script 
-//-     include parts/header/toggle_header.js
+  script(src="materialize-css/js/materialize.min.js")
+  script 
+    include parts/header/toggle_header.js
+    include parts/init-js/select-init.js
+    
+  
 //-     include parts/index_modal/toggle_modal.js
