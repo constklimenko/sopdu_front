@@ -427,6 +427,9 @@ section {
   font-size: 30px;
   line-height: 130%;
 }
+.header-not-sticky header {
+  position: initial;
+}
 @-webkit-keyframes turn_down {
   from {
     height: 0;
