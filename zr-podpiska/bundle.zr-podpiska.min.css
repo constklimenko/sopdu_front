@@ -390,6 +390,11 @@ h2 {
   align-content: center;
   justify-content: center;
 }
+@media only screen and (max-width: 1040px) {
+  .zr-button {
+    max-width: 73vw;
+  }
+}
 .zr-button:hover {
   text-decoration: none;
   color: white;
@@ -995,7 +1000,7 @@ section {
 @media only screen and (max-width: 1040px) {
   .choose__month,
   .choose__year {
-    padding: 2rem 2rem 2rem 2rem ;
+    padding: 2rem 2rem 2rem 2rem;
     width: 100%;
     margin-bottom: 20px;
   }
@@ -1019,7 +1024,7 @@ section {
     margin-bottom: 10px;
   }
 }
-@supports not ( display: grid) {
+@supports not (display: grid) {
   .choose__month {
     flex-direction: column;
     align-content: space-between;
@@ -1050,6 +1055,11 @@ section {
 }
 .choose__month__button {
   justify-self: center;
+}
+@media only screen and (max-width: 1040px) {
+  .choose__month__button {
+    width: 73vw;
+  }
 }
 .choose__month__little-text {
   align-self: start;
@@ -1089,7 +1099,7 @@ section {
     margin-bottom: 0;
   }
 }
-@supports not ( display: grid) {
+@supports not (display: grid) {
   .choose__year {
     display: flex;
     flex-direction: row;
@@ -1771,6 +1781,11 @@ section {
     grid-column: 1;
   }
 }
+@media only screen and (max-width: 1040px) {
+  .reg__choose__month {
+    padding: 3em 1em 2em 1em;
+  }
+}
 .reg .promo-code {
   grid-column: span 2;
   background-color: #F2F2F2;
@@ -1781,6 +1796,129 @@ section {
   .reg .promo-code {
     grid-column: 1;
   }
+}
+.reg__footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  background-color: white;
+}
+.reg__footer__container {
+  margin: 0 auto;
+  max-width: 539px;
+  width: 90%;
+  --container-width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 0;
+  row-gap: 10px;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  align-items: center;
+  justify-items: center;
+}
+@media only screen and (min-width: 1040px) {
+  .reg__footer__container {
+    width: 85%;
+    --container-width: 85vw;
+  }
+}
+@media only screen and (min-width: 1401px) {
+  .reg__footer__container {
+    width: 70%;
+    --container-width: 70vw;
+  }
+}
+@media only screen and (min-width: 539px) {
+  .reg__footer__container {
+    --container-width: 539px;
+  }
+}
+@supports not (grid-row-gap: 10px) {
+  .reg__footer__container > div,
+  .reg__footer__container > p,
+  .reg__footer__container > a {
+    margin-bottom: 10px;
+  }
+}
+@supports not (display: grid) {
+  .reg__footer__container {
+    flex-direction: row;
+    align-content: space-between;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .reg__footer__container {
+    grid-template-columns: 1fr 2fr;
+    grid-row-gap: 3px;
+    padding: 7px 0 7px 0;
+  }
+}
+.reg__footer__time {
+  color: #636363;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+}
+@media only screen and (max-width: 1040px) {
+  .reg__footer__time {
+    grid-column: 1;
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+.reg__footer__little-text {
+  grid-column: span 3;
+}
+@media only screen and (max-width: 1040px) {
+  .reg__footer__little-text {
+    grid-column: 1;
+  }
+}
+.reg__footer__price {
+  font-size: 30px;
+  line-height: 130%;
+  font-weight: bold;
+}
+.reg__footer__button {
+  justify-self: stretch;
+}
+@media only screen and (max-width: 1040px) {
+  .reg__footer__button {
+    grid-column: 2;
+    grid-row: 1/3;
+  }
+}
+.reg__footer__little-text {
+  align-self: start;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+}
+@media only screen and (max-width: 1040px) {
+  .reg__footer__little-text {
+    display: none;
+  }
+}
+.reg__footer__little-text > a {
+  font-size: inherit;
+  text-decoration: none;
+  color: #989898;
+  cursor: pointer;
+}
+.reg__footer a.choose__month__little-text {
+  cursor: pointer;
+  color: #989898;
+  font-size: 18px;
+}
+.reg__footer a.choose__month__little-text:hover {
+  color: #BD5555 !important;
 }
 .date-picker {
   background-color: #F2F2F2;
@@ -1809,6 +1947,8 @@ section {
   flex-wrap: wrap;
   width: 100%;
   align-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   font-weight: bold;
   font-size: 18px;
   line-height: 130%;
@@ -1816,7 +1956,7 @@ section {
 }
 .date-picker__row__price {
   color: #636363;
-  padding-left: 22px;
+  justify-self: center;
 }
 .date-picker__row__months {
   flex-direction: row !important;
@@ -1869,6 +2009,7 @@ section {
 }
 .input-field {
   position: relative;
+  max-width: 90vw;
 }
 .input-field ul {
   padding-left: 0;
