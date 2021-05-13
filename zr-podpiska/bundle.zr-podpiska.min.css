@@ -1844,15 +1844,24 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 9px 20px;
-  font-size: 17px;
-  line-height: 130%;
-  color: #636363;
   border-radius: 5px;
   height: 50px;
 }
+.date-picker__row__month label {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 0.7em;
+  font-size: 17px;
+  line-height: 130%;
+  cursor: pointer;
+  color: #636363;
+}
 .date-picker__row__month--active {
   background-color: #970000;
+  color: white;
+}
+.date-picker__row__month--active label {
   color: white;
 }
 .input-field {

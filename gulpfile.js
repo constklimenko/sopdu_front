@@ -99,8 +99,8 @@ gulp.task('serve', (done) => {
     });
     gulp.watch(config.path.less, gulp.series('less'));
     gulp.watch(config.path.less2, gulp.series('less'));
-    gulp.watch(config.path.pug, gulp.series('pages'));
-    gulp.watch(config.path.pug2, gulp.series('pages'));
+    gulp.watch(config.path.pug, gulp.series('page'));
+    gulp.watch(config.path.pug2, gulp.series('page'));
     //, 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
@@ -117,4 +117,4 @@ const globs = [
 
 
 
-gulp.task('default', gulp.series('less','page',  'serve'));
+gulp.task('default', gulp.series('less','page', 'serve'));

@@ -113,13 +113,25 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 9px 20px;
-            .Description;
-            color: @gray_04;
+           
+           
             border-radius: 5px;
             height: 50px;
 
+            & label{
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding-top: 0.7em;
+                .Description;
+                cursor: pointer;
+                color: @gray_04;
+            }
+
             &--active {
+                & label{
+                    color: white;
+                }
                 background-color: @dark_red;
                 color: @white;
             }
