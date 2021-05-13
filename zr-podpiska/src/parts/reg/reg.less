@@ -55,10 +55,18 @@
     &__choose__month {
         .grid-col-span-m;
         .box-shadow;
-        grid-template-rows: 1em @h2-size auto;
+        grid-template-rows: 1em  auto;
         padding: 30px calc(0.21 * var(--container-width)) 35px calc(0.21 * var(--container-width));
+        
         @media only screen and (max-width: @size-tablete){
-            padding: 3em 1em 2em 1em;
+            padding: 30px 1em 2em 24px;
+
+        }
+
+        &__price{
+
+            font-size: 44px;
+
         }
 
     }
@@ -125,6 +133,10 @@
     &__price {
       .Title_30px;
       font-weight: bold;
+
+      @media only screen and (max-width: @size-tablete){
+          .Subhead;
+      }
     }
 
     

@@ -148,7 +148,7 @@ body {
   --Fmin_num2: 12;
   --return2: calc((100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
   --font-size: var(--return2);
-  --block-gap: 78px;
+  --block-gap: 4.33333333rem;
   --cross-size: 33px;
 }
 @media screen and (max-width: 320px) {
@@ -171,7 +171,7 @@ body {
     --return2: 18px;
   }
 }
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 700px) {
   body {
     --block-gap: 20px;
     --font-size: 12px;
@@ -180,6 +180,7 @@ body {
 }
 @media only screen and (min-width: 1040px) {
   body {
+    --block-gap: 78px;
     --font-size: 18px;
     --h2-size: 44px;
   }
@@ -390,7 +391,7 @@ h2 {
   align-content: center;
   justify-content: center;
 }
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 700px) {
   .zr-button {
     max-width: 73vw;
   }
@@ -1773,7 +1774,7 @@ section {
 .reg__choose__month {
   grid-column: span 2;
   box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.15);
-  grid-template-rows: 1em var(--h2-size) auto;
+  grid-template-rows: 1em  auto;
   padding: 30px calc(0.21 * var(--container-width)) 35px calc(0.21 * var(--container-width));
 }
 @media only screen and (max-width: 1040px) {
@@ -1783,8 +1784,11 @@ section {
 }
 @media only screen and (max-width: 1040px) {
   .reg__choose__month {
-    padding: 3em 1em 2em 1em;
+    padding: 30px 1em 2em 24px;
   }
+}
+.reg__choose__month__price {
+  font-size: 44px;
 }
 .reg .promo-code {
   grid-column: span 2;
@@ -1884,6 +1888,13 @@ section {
   font-size: 30px;
   line-height: 130%;
   font-weight: bold;
+}
+@media only screen and (max-width: 1040px) {
+  .reg__footer__price {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+  }
 }
 .reg__footer__button {
   justify-self: stretch;

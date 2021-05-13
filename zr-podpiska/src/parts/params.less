@@ -38,17 +38,18 @@ body{
   .f-size2( 12px, 18px);
   --font-size: var(--return2);
 
-  --block-gap: 78px;
+  --block-gap: 4.33333333333rem;
   --cross-size: 33px;
 
-  @media only screen and (max-width: @size-tablete) {
+  @media only screen and (max-width: @size-mobile) {
     --block-gap: 20px;
     --font-size: 12px;
     --h2-size: 24px;
+
   }
 
   @media only screen and (min-width: @size-tablete) {
-    
+    --block-gap: 78px;
     --font-size: 18px;
     --h2-size: 44px;
   }
