@@ -13,7 +13,7 @@ article.reg
                 option(value) 24 месяца
             label Период подписки
         .input-field
-            select.icons
+            select
                 option(value, disabled, selected) Выберите количество
                 option.left(value) 1 штука
                 option.left(value ) 2 штуки
@@ -33,6 +33,11 @@ article.reg
 
         include reg-contacts.pug
         include reg-adress.pug
+
+        .input-field.span-2
+            textarea#comment.materialize-textarea
+            label(for="comment") Комментарий к подписке
+                span.ness *
 
         .promo-code 
             .input-field

@@ -19,7 +19,7 @@ const ftp = require('vinyl-ftp');
 const pathName = 'zr-podpiska';
 const pathName_b = 'zr-podpiska';
 const pageName = "subscribe";
-// const pageName = "index";
+const pageName2 = "index";
 let dot = '.';
 
 if (pathName == '.') {
@@ -38,6 +38,7 @@ const config = {
         html: `${pathName}/${pageName}.html`,
         pug: `${pathName}/src/${pageName}.pug`,
         pug2: `${pathName}/src/parts/**/*.pug`,
+        pug_page2: `${pathName}/src/${pageName2}.pug`
 
     },
     output: {
@@ -52,6 +53,15 @@ const config = {
 
 gulp.task('page', function() {
     return gulp.src(config.path.pug)
+        .pipe(pug({
+            plugins: [pugbem]
+        }))
+        .pipe(gulp.dest(`./${pathName}/`));
+});
+
+
+gulp.task('page2', function() {
+    return gulp.src(config.path.pug_page2)
         .pipe(pug({
             plugins: [pugbem]
         }))
@@ -99,8 +109,8 @@ gulp.task('serve', (done) => {
     });
     gulp.watch(config.path.less, gulp.series('less'));
     gulp.watch(config.path.less2, gulp.series('less'));
-    gulp.watch(config.path.pug, gulp.series('page'));
-    gulp.watch(config.path.pug2, gulp.series('page'));
+    gulp.watch(config.path.pug, gulp.series('page', 'page2'));
+    gulp.watch(config.path.pug2, gulp.series('page','page2'));
     //, 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
@@ -117,4 +127,4 @@ const globs = [
 
 
 
-gulp.task('default', gulp.series('less','page', 'serve'));
+gulp.task('default', gulp.series('less','page','page2', 'serve'));

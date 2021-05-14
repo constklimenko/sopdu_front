@@ -1,44 +1,118 @@
-@import (reference)  "../materialize.css";
+@import (reference) "../materialize.css";
+
+.span-2{
+    .grid-col-span-m;
+}
+.ness{
+   
+    color:#a70000;
+
+}
 
 
-.input-field{
-
-    
+.input-field {
     position: relative;
     max-width: 90vw;
-    
-        & ul{
-            padding-left: 0;
-            top: 7px!important;
-        }
-        & li{
-            list-style: none;
-        }
-    }
-    
-    .select-wrapper + label{
-        .Description;
-    }
-    
-    
-    .dropdown-content li > span{
-        .Subhead;
-        color: @gray_04;
+
+    & ul {
+        padding-left: 0;
+        top: 7px !important;
     }
 
-    .select-wrapper input.select-dropdown{
-        font-weight: 700;
-        color: @gray_04;
+    & li {
+        list-style: none;
     }
 
-    
+    & label{
+        font-size: 17px;
+    }
+}
 
-    [type="checkbox"].filled-in:checked + span:not(.lever):after {
-        border: 2px solid @gray_03;
+.select-wrapper+label {
+    .Description;
+}
+
+
+.dropdown-content li>span {
+    .Subhead;
+    color: @gray_04;
+}
+
+.select-wrapper input.select-dropdown {
+    font-weight: 700;
+    color: @gray_04;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid @gray_03;
     background-color: @white;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):before {
+    border-right: 2px solid @gray_03;
+    border-bottom: 2px solid @gray_03;
+}
+
+// radio
+.form-subtitle{
+    .Title_30px;
+    color: @dark_red;
+    .grid-col-span-m;
+}
+
+.radio-container{
+    background-color: @gray_01;
+    .grid-col-span-m;
+    .grid(1fr 1fr, auto);
+    padding: 15px 26px 15px 26px;
+
+
+    @media screen and (max-width: @size-tablete){
+        .grid(1fr );
+        padding: 11px;
+      
     }
 
-    [type="checkbox"].filled-in:checked + span:not(.lever):before{
-        border-right: 2px solid @gray_03;
-    border-bottom: 2px solid @gray_03;
+    &>label{
+        height: auto;
+
+        [type="radio"]:not(:checked) + span, [type="radio"]:checked + span{
+            .Subhead;
+            padding-left: 50px;
+            height: 45px;
+            padding-top: 0.5em;
+        }
     }
+
+
+}
+
+[type="radio"] + span:before, [type="radio"] + span:after {
+    width:35px;
+    height:35px;
+    
+}
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:before, [type="radio"].with-gap:checked + span:after {
+    border-color: @dark_red;
+}
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
+    background-color: @dark_red;
+}
+
+[type="radio"].with-gap:checked + span:after {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+.text-container-3{
+    .grid(1fr 1fr 1fr, auto, 10px);
+    @media screen and (max-width: @size-tablete){
+        .grid(1fr 1fr, auto, 10px );
+
+        & > .input-field:last-child{
+            .grid-col-span;
+        }
+    }
+}

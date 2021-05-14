@@ -1,0 +1,83 @@
+.date-picker {
+    background-color: @gray_01;
+    .grid-col-span-m;
+    padding: 26px;
+
+
+
+    &__new-row {
+        .Subhead;
+        color: @gray_04;
+        text-align: center
+    }
+
+    &__row {
+
+        .flex-column;
+        
+
+        &__header {
+            .flex-row;
+            width: 100%;
+            align-content: space-between;
+            column-gap: 20px;
+            
+
+            .Subhead;
+            margin-bottom: 15px;
+
+
+        }
+
+        &__price {
+            color: @gray_04;
+            justify-self: center;
+        }
+
+        &__months {
+            .flex-row;
+            width: 100%;
+            align-content: space-between;
+            .grid(repeat(auto-fill, minmax(72px, 1fr)), 1fr, 9.87px, 9.87px);
+            margin-bottom: 15px;
+        }
+
+        &__month {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            border-radius: 5px;
+            height: 50px;
+
+            & label {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding-top: 0.7em;
+                .Description;
+                cursor: pointer;
+                color: @gray_04;
+            }
+
+            &>input:focus label,&>input:target label{
+                color: lightseagreen;
+            }
+
+            &--active {
+                & label {
+                    color: white;
+                }
+
+                background-color: @dark_red;
+                color: @white;
+            }
+        }
+
+
+
+    }
+
+}

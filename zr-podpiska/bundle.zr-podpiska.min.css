@@ -1774,7 +1774,7 @@ section {
 .reg__choose__month {
   grid-column: span 2;
   box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.15);
-  grid-template-rows: 1em  auto;
+  grid-template-rows: 1em auto;
   padding: 30px calc(0.21 * var(--container-width)) 35px calc(0.21 * var(--container-width));
 }
 @media only screen and (max-width: 1040px) {
@@ -1807,6 +1807,8 @@ section {
   bottom: 0;
   z-index: 50;
   background-color: white;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 .reg__footer__container {
   margin: 0 auto;
@@ -2011,6 +2013,10 @@ section {
   cursor: pointer;
   color: #636363;
 }
+.date-picker__row__month > input:focus label,
+.date-picker__row__month > input:target label {
+  color: lightseagreen;
+}
 .date-picker__row__month--active {
   background-color: #970000;
   color: white;
@@ -2018,16 +2024,30 @@ section {
 .date-picker__row__month--active label {
   color: white;
 }
+.span-2 {
+  grid-column: span 2;
+}
+@media only screen and (max-width: 1040px) {
+  .span-2 {
+    grid-column: 1;
+  }
+}
+.ness {
+  color: #a70000;
+}
 .input-field {
   position: relative;
   max-width: 90vw;
 }
 .input-field ul {
   padding-left: 0;
-  top: 7px!important;
+  top: 7px !important;
 }
 .input-field li {
   list-style: none;
+}
+.input-field label {
+  font-size: 17px;
 }
 .select-wrapper + label {
   font-size: 17px;
@@ -2050,6 +2070,131 @@ section {
 [type="checkbox"].filled-in:checked + span:not(.lever):before {
   border-right: 2px solid #989898;
   border-bottom: 2px solid #989898;
+}
+.form-subtitle {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 130%;
+  color: #970000;
+  grid-column: span 2;
+}
+@media only screen and (max-width: 1040px) {
+  .form-subtitle {
+    grid-column: 1;
+  }
+}
+.radio-container {
+  background-color: #F2F2F2;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  row-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  padding: 15px 26px 15px 26px;
+}
+@media only screen and (max-width: 1040px) {
+  .radio-container {
+    grid-column: 1;
+  }
+}
+@supports not (grid-row-gap: 0) {
+  .radio-container > div,
+  .radio-container > p,
+  .radio-container > a {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .radio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    row-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    padding: 11px;
+  }
+  @supports not (grid-row-gap: 0) {
+    .radio-container > div,
+    .radio-container > p,
+    .radio-container > a {
+      margin-bottom: 0;
+    }
+  }
+}
+.radio-container > label {
+  height: auto;
+}
+.radio-container > label [type="radio"]:not(:checked) + span,
+.radio-container > label [type="radio"]:checked + span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  padding-left: 50px;
+  height: 45px;
+  padding-top: 0.5em;
+}
+[type="radio"] + span:before,
+[type="radio"] + span:after {
+  width: 35px;
+  height: 35px;
+}
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border-color: #970000;
+}
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: #970000;
+}
+[type="radio"].with-gap:checked + span:after {
+  transform: scale(0.7);
+}
+.text-container-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 10px;
+  row-gap: 0;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@supports not (grid-row-gap: 0) {
+  .text-container-3 > div,
+  .text-container-3 > p,
+  .text-container-3 > a {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .text-container-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 0;
+    grid-column-gap: 10px;
+    row-gap: 0;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  @supports not (grid-row-gap: 0) {
+    .text-container-3 > div,
+    .text-container-3 > p,
+    .text-container-3 > a {
+      margin-bottom: 0;
+    }
+  }
+  .text-container-3 > .input-field:last-child {
+    grid-column: span 2;
+  }
 }
 @media (min-width: 701px) {
   .m-show {

@@ -1,0 +1,36 @@
+h3.form-subtitle Контакты
+
+p.radio-container
+    label
+        input.with-gap(name="person-or-company", type="radio",data-selector = "#company_name", data-trigger="off", onchange="ToggleBlock(this)")
+        span Частное лицо
+    label
+        input.with-gap(name="person-or-company", type="radio",data-selector = "#company_name", data-trigger="on", onchange="ToggleBlock(this)")
+        span Организация
+
+
+.input-field.span-2.hide
+  input#company_name.validate(type="text")
+  label(for="company_name") Название организации 
+    span.ness *
+
+.input-field
+  input#first_name.validate(type="text")
+  label(for="first_name") Имя 
+    span.ness *
+
+.input-field
+  input#last_name.validate(type="text")
+  label(for="last_name") Фамилия
+    span.ness *
+.input-field.span-2
+  input#second_name.validate(type="text")
+  label(for="second_name") Отчество
+.input-field
+  input#email.validate(type="email")
+  label(for="email") Email
+  span.helper-text(data-error="неверный формат почты", data-success="") 
+.input-field
+  input#phone.validate(type="tel")
+  label(for="phone" pattern="(\+?\d[- .]*){7,13}" ) Телефон
+  span.helper-text(data-error="неверный формат номера", data-success="") 

@@ -1,4 +1,4 @@
-@import (reference)  "../../../bundle.zr-podpiska.min.css";
+@import (reference) "../../../bundle.zr-podpiska.min.css";
 
 .reg {
     .container-m(539px);
@@ -11,13 +11,13 @@
 
         .box-shadow;
         .Subhead;
-        background: #970000;
-        height: 64px;
-        color: white;
-        padding: calc(32px - 1rem) 1rem 0 1rem;
+        background   : #970000;
+        height       : 64px;
+        color        : white;
+        padding      : calc(32px - 1rem) 1rem 0 1rem;
         margin-bottom: 10px;
-        margin-top: 50px;
-        text-align: center;
+        margin-top   : 50px;
+        text-align   : center;
 
         @media only screen and (max-width: @size-mobile) {
             padding-top: 0.5rem;
@@ -55,15 +55,15 @@
     &__choose__month {
         .grid-col-span-m;
         .box-shadow;
-        grid-template-rows: 1em  auto;
-        padding: 30px calc(0.21 * var(--container-width)) 35px calc(0.21 * var(--container-width));
-        
-        @media only screen and (max-width: @size-tablete){
+        grid-template-rows: 1em auto;
+        padding           : 30px calc(0.21 * var(--container-width)) 35px calc(0.21 * var(--container-width));
+
+        @media only screen and (max-width: @size-tablete) {
             padding: 30px 1em 2em 24px;
 
         }
 
-        &__price{
+        &__price {
 
             font-size: 44px;
 
@@ -74,199 +74,125 @@
     & .promo-code {
         .grid-col-span-m;
         background-color: @gray_01;
-        width: 100%;
-        padding: 0 1rem 0 1rem;
+        width           : 100%;
+        padding         : 0 1rem 0 1rem;
     }
 
-    &__footer{
-
-    
-    position: sticky;
-    bottom: 0;
-    z-index: 50;
-    background-color: @white;
-    
-
-    &__container{
-        .container-m(539px);
-        .grid(1fr 1fr 2fr, auto, 0, 10px);
-        align-items: center;
-        justify-items: center;
-      
-    
-        @supports not (display: grid) {
-    
-          flex-direction: row;
-          align-content: space-between;
-        }
-
-        @media only screen and (max-width: @size-tablete){
-        grid-template-columns: 1fr 2fr;
-        grid-row-gap: 3px;
-        padding: 7px 0 7px 0;    
-        }
+    &__footer {
 
 
+        position        : sticky;
+        bottom          : 0;
+        z-index         : 50;
+        background-color: @white;
+        padding-top: 11px;
+        padding-bottom: 11px;
 
-    }
-    
 
-    &__time {
-      color: @gray_04;
-      font-family: PT Sans;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 130%;
-      @media only screen and (max-width: @size-tablete){
-        grid-column: 1;  
-        .Small_text;  
-        }
-    }
+        &__container {
+            .container-m(539px);
+            .grid(1fr 1fr 2fr, auto, 0, 10px);
+            align-items  : center;
+            justify-items: center;
 
-   
-    &__little-text
-     {
-      .grid-col-span-m(3);
-    }
 
-    &__price {
-      .Title_30px;
-      font-weight: bold;
+            @supports not (display: grid) {
 
-      @media only screen and (max-width: @size-tablete){
-          .Subhead;
-      }
-    }
+                flex-direction: row;
+                align-content : space-between;
+            }
 
-    
+            @media only screen and (max-width: @size-tablete) {
+                grid-template-columns: 1fr 2fr;
+                grid-row-gap         : 3px;
+                padding              : 7px 0 7px 0;
+            }
 
-    &__button {
-      justify-self: stretch;
-      @media only screen and (max-width: @size-tablete){
-        grid-column: 2;  
-        grid-row: ~'1/3';  
+
+
         }
 
 
-    }
+        &__time {
+            color      : @gray_04;
+            font-family: PT Sans;
+            font-style : normal;
+            font-weight: bold;
+            font-size  : 18px;
+            line-height: 130%;
 
-    &__little-text {
-      align-self: start;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 150%;
-      text-align: center;
-      @media only screen and (max-width: @size-tablete){
-        display: none; 
+            @media only screen and (max-width: @size-tablete) {
+                grid-column: 1;
+                .Small_text;
+            }
         }
 
-      &>a {
-        font-size: inherit;
-        text-decoration: none;
-        color: @gray_03;
-        cursor: pointer;
-      }
 
-
-    }
-
-    a.choose__month__little-text {
-      cursor: pointer;
-      color: @gray_03;
-      font-size: 18px;
-    }
-
-    a.choose__month__little-text:hover {
-      color: @light_red  !important;
-    }
-
-
-
-
-    }
-
-
-
-
-}
-
-.date-picker {
-    background-color: @gray_01;
-    .grid-col-span-m;
-    padding: 26px;
-
-
-
-    &__new-row {
-        .Subhead;
-        color: @gray_04;
-        text-align: center
-    }
-
-    &__row {
-
-        .flex-column;
-        
-
-        &__header {
-            .flex-row;
-            width: 100%;
-            align-content: space-between;
-            column-gap: 20px;
-            
-
-            .Subhead;
-            margin-bottom: 15px;
-
-
+        &__little-text {
+            .grid-col-span-m(3);
         }
 
         &__price {
-            color: @gray_04;
-            justify-self: center;
-        }
+            .Title_30px;
+            font-weight: bold;
 
-        &__months {
-            .flex-row;
-            width: 100%;
-            align-content: space-between;
-            .grid(repeat(auto-fill, minmax(72px, 1fr)), 1fr, 9.87px, 9.87px);
-            margin-bottom: 15px;
-        }
-
-        &__month {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-
-            border-radius: 5px;
-            height: 50px;
-
-            & label {
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                padding-top: 0.7em;
-                .Description;
-                cursor: pointer;
-                color: @gray_04;
-            }
-
-            &--active {
-                & label {
-                    color: white;
-                }
-
-                background-color: @dark_red;
-                color: @white;
+            @media only screen and (max-width: @size-tablete) {
+                .Subhead;
             }
         }
+
+
+
+        &__button {
+            justify-self: stretch;
+
+            @media only screen and (max-width: @size-tablete) {
+                grid-column: 2;
+                grid-row   : ~'1/3';
+            }
+
+
+        }
+
+        &__little-text {
+            align-self : start;
+            font-weight: normal;
+            font-size  : 12px;
+            line-height: 150%;
+            text-align : center;
+
+            @media only screen and (max-width: @size-tablete) {
+                display: none;
+            }
+
+            &>a {
+                font-size      : inherit;
+                text-decoration: none;
+                color          : @gray_03;
+                cursor         : pointer;
+            }
+
+
+        }
+
+        a.choose__month__little-text {
+            cursor   : pointer;
+            color    : @gray_03;
+            font-size: 18px;
+        }
+
+        a.choose__month__little-text:hover {
+            color: @light_red  !important;
+        }
+
 
 
 
     }
 
+
+
+
 }
+
+@import "./date-picker.less";

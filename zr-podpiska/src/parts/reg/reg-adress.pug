@@ -1,0 +1,42 @@
+h3.form-subtitle Адрес
+
+p.radio-container
+    label
+        input.with-gap(name="person-or-company2", type="radio")
+        span Частное лицо
+    label
+        input.with-gap(name="person-or-company2", type="radio")
+        span Организация
+
+.input-field.span-2
+    textarea#zip.materialize-textarea
+    label(for="zip") Почтовый индекс 
+        span.ness *
+
+
+.input-field
+    input#city.validate(type="text")
+    label(for="city") Город 
+        span.ness *
+
+.input-field
+    input#city2.validate(type="text")
+    label(for="city2") Населенный пункт
+        span.ness * 
+.input-field.span-2 
+    input#street.validate(type="text")
+    label(for="street") Улица 
+        span.ness *
+.text-container-3.span-2 
+    .input-field
+        input#house.validate(type="number")
+        label(for="house") Дом 
+            span.ness *
+    .input-field
+        input#house2.validate(type="number")
+        label(for="house2") Корпус 
+            //- span.ness *
+    .input-field
+        input#flat.validate(type="number")
+        label(for="flat") Квартира
+            //- span.ness *
