@@ -2,16 +2,21 @@ h3.form-subtitle Адрес
 
 p.radio-container
     label
-        input.with-gap(name="person-or-company2", type="radio")
+        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('on', '#a-ya', 'hide')")
         span Частное лицо
     label
-        input.with-gap(name="person-or-company2", type="radio")
+        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('on', '#a-ya', 'hide')")
         span Организация
 
-.input-field.span-2
-    textarea#zip.materialize-textarea
+.input-field
+    input#zip.validate(type="text")
     label(for="zip") Почтовый индекс 
         span.ness *
+        
+.input-field.hide
+    input#a-ya.validate(type="text")
+    label(for="a-ya") Абонентский ящик
+        
 
 
 .input-field

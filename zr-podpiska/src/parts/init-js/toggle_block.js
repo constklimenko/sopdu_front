@@ -1,8 +1,8 @@
-function ToggleBlock(e){
-if(e.getAttribute('data-trigger') == 'on'){
-    document.querySelector(e.getAttribute('data-selector')).parentNode.classList.remove('hide');
-}else{
-    document.querySelector(e.getAttribute('data-selector')).parentNode.classList.add('hide');
-}
-   
+function ToggleBlock(trigger, selector, target_class) {
+    if (trigger == 'on') {
+        document.querySelector(selector).parentNode.classList.remove(target_class);
+    } else {
+        document.querySelector(selector).parentNode.classList.add(target_class);
+    }
+
 }
