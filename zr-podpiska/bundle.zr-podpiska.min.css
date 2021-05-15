@@ -1880,6 +1880,11 @@ section {
   flex-wrap: nowrap!important;
   justify-self: center;
 }
+@media only screen and (max-width: 1040px) {
+  .reg__pay {
+    max-width: 100%;
+  }
+}
 .reg__pay__img {
   display: block;
   content: " ";
