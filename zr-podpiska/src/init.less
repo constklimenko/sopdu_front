@@ -252,6 +252,19 @@ max-width:73vw;
   box-shadow: ~"0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%), 0 3px 1px -1px rgb(0 0 0 / 20%)";
 }
 
+.gray_button:extend(.zr-button all){
+  background-color: @white;
+  color: @gray_03;
+  border: 2px solid @gray_03;
+  
+  &:hover{
+    background-color: @white;
+    color: @light_red;
+    border: 2px solid @light_red;
+  }
+  
+}
+
 .block-container{
   .container-m();
   
