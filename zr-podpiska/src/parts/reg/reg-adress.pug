@@ -2,13 +2,13 @@ h3.form-subtitle Адрес
 
 p.radio-container
     label
-        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('on', '#a-ya', 'hide')")
+        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('off', '#a-ya', 'hide');ToggleBlock('off','#zip','span-2')")
         span Частное лицо
     label
-        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('on', '#a-ya', 'hide')")
+        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('on', '#a-ya', 'hide');ToggleBlock('on','#zip','span-2')")
         span Организация
 
-.input-field
+.input-field.span-2
     input#zip.validate(type="text")
     label(for="zip") Почтовый индекс 
         span.ness *
