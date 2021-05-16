@@ -61,6 +61,11 @@
                 cursor: pointer;
                 color: @gray_04;
             }
+            
+            & input[disabled='true'] + label{
+                border: 1px solid #636363;
+                border-radius: 5px;
+            }
 
             &>input:focus label,&>input:target label{
                 color: lightseagreen;

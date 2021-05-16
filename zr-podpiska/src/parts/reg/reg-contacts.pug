@@ -2,7 +2,7 @@ h3.form-subtitle Контакты
 
 p.radio-container
     label
-        input.with-gap(name="person-or-company", type="radio",data-selector = "#company_name", data-trigger="off", onchange="ToggleBlock('off', '#company_name', 'hide')")
+        input.with-gap(checked, name="person-or-company", type="radio",data-selector = "#company_name", data-trigger="off", onchange="ToggleBlock('off', '#company_name', 'hide')")
         span Частное лицо
     label
         input.with-gap(name="person-or-company", type="radio",data-selector = "#company_name", data-trigger="on", onchange="ToggleBlock('on', '#company_name', 'hide')")

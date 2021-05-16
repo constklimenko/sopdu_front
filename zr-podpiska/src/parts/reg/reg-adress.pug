@@ -2,7 +2,7 @@ h3.form-subtitle Адрес
 
 p.radio-container
     label
-        input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('off', '#a-ya', 'hide');ToggleBlock('off','#zip','span-2')")
+        input.with-gap(checked, name="person-or-company2", type="radio", onchange="ToggleBlock('off', '#a-ya', 'hide');ToggleBlock('off','#zip','span-2')")
         span Частное лицо
     label
         input.with-gap(name="person-or-company2", type="radio", onchange="ToggleBlock('on', '#a-ya', 'hide');ToggleBlock('on','#zip','span-2')")
@@ -34,11 +34,11 @@ p.radio-container
         span.ness *
 .text-container-3.span-2 
     .input-field
-        input#house.validate(type="number")
+        input#house.validate(type="text")
         label(for="house") Дом 
             span.ness *
     .input-field
-        input#house2.validate(type="number")
+        input#house2.validate(type="text")
         label(for="house2") Корпус 
             //- span.ness *
     .input-field

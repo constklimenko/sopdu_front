@@ -1,10 +1,11 @@
 article.reg 
     .reg__alert Заполните поля обозначенные красным
     h1._title Оформление подписки
-    ._subtitle Если вы ранее уже оформляли подписку на нашем сайте, то войдите в 
-        a._subtitle(href="http://")  Личный&nbsp;кабинет
-    h3._form__title 
+    ._subtitle Если вы ранее уже оформляли подписку на нашем сайте, то&nbsp;войдите&nbsp;в 
+        a._subtitle__a(href="http://")  Личный&nbsp;кабинет
+    
     form(action="", method="post")._form
+        h3.form-subtitle  Подписка
         .input-field
             select
                 option(value, disabled, selected) Выберите период
@@ -39,7 +40,7 @@ article.reg
             label(for="comment") Комментарий к подписке
                 span.ness *
         
-        h2.reg__title.span-2  Способ оплаты
+        h3.form-subtitle.span-2(style="color:black;")  Способ оплаты
         
         .reg__pay.zr-button(href="") 
             .reg__pay__img.reg__pay__img--card gg

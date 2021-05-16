@@ -4,8 +4,18 @@
     .container-m(539px);
 
     &__subtitle {
-        font-size: 1rem;
+        .Description;
+        color: @gray_03;
+        font-weight: 400;
+        margin-bottom: 26px;
+        
+    &__a{
+        color: @dark_red;
+        text-decoration: none;
+        font-weight: 400;
     }
+    }
+    
 
     &__alert {
 
@@ -35,7 +45,7 @@
             &>p,
             &>div,
             &>a,
-            &>input {
+            &>input, &> h1,  &> h2,  &> h3,  &> h4,  &> h5 {
                 margin-bottom: 20px
             }
         }
@@ -45,6 +55,8 @@
         &__checkbox {
 
             .grid-col-span-m;
+            position: relative;
+            top:-10px;
 
 
         }
@@ -88,6 +100,7 @@
           display: block;
           
           content: " ";
+          margin-right: 13px;
           
           &--card{
             
@@ -112,18 +125,18 @@
         .grid-col-span-m;
         background-color: @gray_01;
         width           : 100%;
-        padding         : 0 1rem 0 1rem;
+        padding         : 0 1rem 1rem 1rem;
+        margin-bottom: 17px;
     }
 
     &__footer {
-
-
         position        : sticky;
         bottom          : 0;
         z-index         : 50;
         background-color: @white;
         padding-top: 11px;
         padding-bottom: 11px;
+        box-shadow: 0px -8px 32px rgba(0, 0, 0, 0.1);
 
 
         &__container {
