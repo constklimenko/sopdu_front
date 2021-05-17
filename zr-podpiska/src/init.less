@@ -435,9 +435,7 @@ line-height: 130%;
   }
   &__links{
     &--404{
-      @media (max-width:318px ){
-grid-template-columns: 1fr;
-      }
+     
     }
 
   }
@@ -445,6 +443,9 @@ grid-template-columns: 1fr;
   &__link{
     &--404{
       color: @gray_03;
+      @media (max-width:@size-tablete ){
+font-size: 17px;
+      }
     }
 
   }
