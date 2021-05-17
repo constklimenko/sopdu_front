@@ -18,7 +18,7 @@ const ftp = require('vinyl-ftp');
 
 const pathName = 'zr-podpiska';
 const pathName_b = 'zr-podpiska';
-const pageName = "subscribe";
+const pageName = "404";
 const pageName2 = "index";
 let dot = '.';
 
