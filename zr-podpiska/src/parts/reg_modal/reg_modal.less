@@ -1,0 +1,71 @@
+@import (reference) "../index_modal/index_modal";
+
+.reg__modal {
+
+  &:extend(.index-modal all);
+  
+  &__in {
+    &:extend(.header__in all);
+ 
+    justify-self: center;
+    flex-wrap: nowrap;
+    
+    &__img{
+      &:extend(.header__in__img all);
+      
+      
+    }
+  }
+
+  &__container {
+    &:extend(.index-modal__container all);
+  
+    row-gap: 26px;
+    .flex-col;
+    
+    padding:calc(@h2-size * 1.5 )  4.833333rem  calc(@h2-size * 1.5 ) 4.833333rem;
+    
+    @media only screen and (max-width: @size-mobile){
+      padding:25px 13px  25px 13px;
+    }
+  }
+  
+  &__continue {
+    font-weight: bold;
+font-size: 17px;
+line-height: 22px;
+text-align: center;
+justify-self: center;
+cursor: pointer;
+text-decoration: none;
+color: #989898;
+
+  }
+
+  &__cross {
+    &:extend(.index-modal__cross all);
+  }
+  
+  & a.reg__modal__in.zr-button div, & a.reg__modal__in.zr-button span{
+    color:white;
+  }
+  
+  
+
+  &__content {
+    font-family: PT Sans;
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 1.6rem;
+    line-height: 130%;
+    text-align : center;
+    color      : #000000;
+    margin-bottom: 6.5vh ;
+
+    @media only screen and (max-width: @size-mobile) {
+      font-size  : 1.4rem;
+      line-height: 22px;
+    }
+  }
+}
+

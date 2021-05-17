@@ -1,0 +1,12 @@
+.reg__modal#modal_user_exist.hide
+    .reg__modal__container 
+        
+        .reg__modal__content 
+            | Мы обнаружили, что у нас в базе есть пользователь с подобными данными. <br><br>
+            | Виталий Витальевич, это вы?
+        a(href="http://").reg__modal__in.zr-button
+            .header__in__img  ddd
+            span.header__in__text Вход в личный кабинет
+        a(href="http://").reg__modal__continue Это не я, продолжить оформление
+
+        .reg__modal__cross(onclick="toggleModal('#modal_user_exist')") 
