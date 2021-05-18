@@ -1,1 +1,14 @@
-hdh
+
+form(action="", method="get").lk__profile
+    include ../reg/reg-contacts.pug
+    include ../reg/reg-adress.pug
+    
+    .input-field.span-2
+        textarea#comment.materialize-textarea
+        label(for="comment") Комментарий к подписке
+            span.ness *
+            
+    p._form__checkbox
+        label
+            input.filled-in(type="checkbox", checked)
+            span  Оформить авто подписку
