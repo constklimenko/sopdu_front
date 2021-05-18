@@ -1,0 +1,88 @@
+.lk {
+    .container-m(1100px);
+    .grid(minmax(270px ,23.63fr) 75.54fr, auto, 20px);
+    
+    @media only screen and (max-width: @size-mobile){
+        .grid(1fr);
+        
+    }
+
+    &__aside {
+        .flex-col;
+            gap: 20px;
+
+        &__alert {
+            .box-shadow;
+            .Subhead;
+            background: #970000;
+
+            color  : white;
+            padding: calc(32px - 1rem) 1rem 1rem 1rem;
+
+            text-align: center;
+
+            @media only screen and (max-width: @size-mobile) {
+                padding-top: 0.5rem;
+            }
+        }
+        
+        &__container{
+            background-color: @gray_01;
+            padding: 12px;
+            .flex-col;
+            gap: 28px;
+        }
+
+        &__link {
+            .flex-row;
+            
+            flex-wrap   : nowrap !important;
+            gap: 10px;
+            cursor: pointer;
+            &:hover div{
+                color: @light_red;
+            }
+        }
+
+        &__text {
+            font-style : normal;
+            font-weight: bold;
+            font-size  : 18px;
+            line-height: 130%;
+            color: #000000;
+            
+            @media only screen and (max-width: @size-mobile) {
+                font-size  : 16px;
+            }
+        }
+
+        &__icon {
+            width  : 20px;
+            height : 20px;
+            content: " ";
+
+            &--Cap {
+                .masked-icon('img/lk/Cap.svg', 20px, 20px);
+
+            }
+
+            &--BookOpen {
+                .masked-icon('img/lk/BookOpen.svg', 20px, 20px);
+
+            }
+
+            &--Key {
+                .masked-icon('img/lk/Key.svg', 20px, 20px);
+
+            }
+
+
+            &--User {
+                .masked-icon('img/lk/User.svg', 20px, 20px);
+
+            }
+        }
+
+    }
+
+}

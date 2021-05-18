@@ -1,34 +1,72 @@
+// .f-size(@value_min, @value_max, @viewport_min: @viewport-min, @viewport_max: @viewport-max){
+//   --Vmax_num: unit(@viewport_max);
+//   --Vmin: @viewport_min;
+//   --Vmin_num: unit(@viewport_min);  
+//   --Fmax_num: unit(@value_max);
+//   --Fmin: @value_min;
+//   --Fmin_num: unit(@value_min);
+// --return:   calc( (100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
+// @media screen and (max-width: @viewport_min) {
+//   --return: @value_min;
+// }
+// @media screen and (min-width: @viewport_max) {
+//   --return: @value_max;
+// }
+
+// }
+
+// .f-size2(@value_min, @value_max, @viewport_min: @viewport-min, @viewport_max: @viewport-max){
+//   --Vmax_num2: unit(@viewport_max);
+//   --Vmin2: @viewport_min;
+//   --Vmin_num2: unit(@viewport_min);  
+//   --Fmax_num2: unit(@value_max);
+//   --Fmin2: @value_min;
+//   --Fmin_num2: unit(@value_min);
+// --return2:   calc( ((10vw - var(--Vmin)) * (var(--Fmax_num) - var(--Fmin_num)))/(var(--Vmax_num) - var(--Vmin_num))  + var(--Fmin));
+
+// @media screen and (max-width: @viewport_min) {
+//   --return2: @value_min;
+// }
+// @media screen and (min-width: @viewport_max) {
+//   --return2: @value_max;
+// }
+
+// }
+
 .f-size(@value_min, @value_max, @viewport_min: @viewport-min, @viewport_max: @viewport-max){
-  --Vmax_num: unit(@viewport_max);
-  --Vmin: @viewport_min;
-  --Vmin_num: unit(@viewport_min);  
-  --Fmax_num: unit(@value_max);
-  --Fmin: @value_min;
-  --Fmin_num: unit(@value_min);
---return:   calc( (100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
-@media screen and (max-width: @viewport_min) {
-  --return: @value_min;
-}
-@media screen and (min-width: @viewport_max) {
-  --return: @value_max;
+  @k: ( @value_max - @value_min)/( @viewport_max - @viewport_min);
+  @b: @value_min - @k * @viewport_min;
+  
+  @c: @b * 1px;
+  
+  --return: ~"calc( " @k ~" * 100vw + " @c ~" )" ;
+  
+  @media screen and (max-width: @viewport_min) {
+    --return: @value_min;
+  }
+  @media screen and (min-width: @viewport_max) {
+    --return: @value_max;
+  }
+  
+  
 }
 
-}
 
 .f-size2(@value_min, @value_max, @viewport_min: @viewport-min, @viewport_max: @viewport-max){
-  --Vmax_num2: unit(@viewport_max);
-  --Vmin2: @viewport_min;
-  --Vmin_num2: unit(@viewport_min);  
-  --Fmax_num2: unit(@value_max);
-  --Fmin2: @value_min;
-  --Fmin_num2: unit(@value_min);
---return2:   calc( (100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
+  @k: ( @value_max - @value_min)/( @viewport_max - @viewport_min);
+  @b: @value_min - @k * @viewport_min;
+  
+  @c: @b * 1px;
+  
+  --return2: ~"calc( " @k ~" * 100vw + " @c ~" )" ;
+  
+  @media screen and (max-width: @viewport_min) {
+    --return2: @value_min;
+  }
+  @media screen and (min-width: @viewport_max) {
+    --return2: @value_max;
+  }
+  
+  
+}
 
-@media screen and (max-width: @viewport_min) {
-  --return2: @value_min;
-}
-@media screen and (min-width: @viewport_max) {
-  --return2: @value_max;
-}
-
-}
