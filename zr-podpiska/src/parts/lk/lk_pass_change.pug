@@ -1,0 +1,14 @@
+form(action="", method="get").lk__pass_change
+    h3.form-subtitle Сменить пароль
+    .input-field
+        input#pass.validate(type="password")
+        label(for="pass") Введите новый пароль 
+            span.ness *
+
+    .input-field
+        input#pass2.validate(type="password")
+        label(for="pass2") Повторите новый пароль
+            span.ness *
+    ._button-container 
+        a(href="#")._button.zr-button Сохранить
+        a(href="#")._button--cancel Отмена
