@@ -1,18 +1,18 @@
 section.lk
 
     aside.lk__aside
-        ._alert Продлить подписку на «За рулем»
+        ._alert Продлить подписку на «За&nbsp;рулем»
         ._container
-            a(onclick="")._link.lk__aside__link--active
+            a(onclick="LkOffAll();LkActivateThis(this);ToggleBlockActual('on', '.lk__profile', 'hide')")._link.lk__aside__link--active
                 ._icon.lk__aside__icon--User
                 ._text Профиль
-            a(onclick="")._link
+            a(onclick="LkOffAll();LkActivateThis(this);ToggleBlockActual('on', '.lk__pass_change', 'hide')")._link
                 ._icon.lk__aside__icon--Key
                 ._text Сменить пароль
-            a(onclick="")._link
+            a(onclick="LkOffAll();LkActivateThis(this);ToggleBlockActual('on', '.lk__history', 'hide')")._link
                 ._icon.lk__aside__icon--BookOpen
                 ._text История подписки
-            a(onclick="")._link
+            a(onclick="LkOffAll();LkActivateThis(this);ToggleBlockActual('on', '.lk__mail', 'hide')")._link
                 ._icon.lk__aside__icon--Cap
                 ._text Написать издательству
             a(style="background-color:white;")._link.m-show

@@ -6,3 +6,4 @@ function ToggleBlock(trigger, selector, target_class) {
     }
 
 }
+
