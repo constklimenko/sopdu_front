@@ -1,4 +1,4 @@
-form(action="", method="get").lk__pass_change
+form(action="", method="get").lk__pass_change.hide
     h3.form-subtitle Сменить пароль
     .input-field
         input#pass.validate(type="password")
@@ -10,5 +10,5 @@ form(action="", method="get").lk__pass_change
         label(for="pass2") Повторите новый пароль
             span.ness *
     ._button-container 
-        a(href="#")._button.zr-button Сохранить
-        a(href="#")._button--cancel Отмена
+        a(href="#").lk__button.zr-button Сохранить
+        a(href="#").lk__button--cancel Отмена
