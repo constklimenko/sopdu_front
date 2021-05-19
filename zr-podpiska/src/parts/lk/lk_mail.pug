@@ -1,0 +1,23 @@
+form(action="", method="get").lk__mail
+    h3.form-subtitle Написать издательству
+    .input-field
+        input#email2.validate(type="email")
+        label(for="email2") Ваша почта для связи
+            span.ness *
+        span.helper-text(data-error="неверный формат почты", data-success="") 
+    .input-field
+        input#phone2.validate(type="tel")
+        label(for="phone2" pattern="(\+?\d[- .]*){7,13}" ) Ваш телефон для связи
+            span.ness *
+        span.helper-text(data-error="неверный формат номера", data-success="") 
+    .input-field.span-2
+            textarea#comment.materialize-textarea
+            label(for="comment") Обращения к издательству
+                span.ness *
+            
+    
+    
+    
+    .lk__button-container 
+        a(href="#").lk__button.zr-button Отправить
+        .choose__month__little-text По всем вопросам готовы ответить help@zr.ru или +7 000 000-00-00 
