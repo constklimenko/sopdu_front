@@ -1,10 +1,6 @@
 html(lang="ru") 
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width,initial-scale=1")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="materialize-css/css/materialize-cut.css")  
-    link(rel="stylesheet", href="bundle.zr-podpiska.min.css") 
+    include parts/common_headings.pug 
      
     title Личный кабинет
     
@@ -12,13 +8,13 @@ html(lang="ru")
     include parts/header/header.pug
     include parts/lk/lk_main.pug
     include parts/footer/footer.pug
+    include parts/common_scripts.pug
     
 
     script 
-      include parts/header/toggle_header.js
-      include parts/index_modal/toggle_modal.js
+      
       include parts/init-js/select-init.js
-      include parts/init-js/toggle_block.js
+      
       include parts/reg/date-picker.js
       include parts/lk/lk_off_all.js
       
