@@ -60,16 +60,19 @@
         }
         
         &__title{
-            font-size: calc(var(--h2-size) + 2px);
-            padding: 0.6em;
+            font-size: calc(var(--h2-size) - 7px);
+            padding: 0.4em;
             cursor: pointer;
             &--active{
                 color: @dark_red;
                 border-bottom: 2px solid @dark_red;
             }
+            @media only screen and (min-width: @size-tablete){
+                padding: 10px;
+            }
             
-            @media only screen and (max-width: @size-tablete){
-                font-size: calc(var(--h2-size) - 2px);
+            @media only screen and (min-width: @viewport-max){
+                font-size: calc(var(--h2-size) + 2px);
             }
         }
         

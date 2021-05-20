@@ -1,19 +1,31 @@
 #modal-in.hide.index-modal
     .index-modal__container.-in
         ._header
-            h2(onclick="HeaderActivateThis(this);")._title Войти
-            h2(onclick="HeaderActivateThis(this);")._title.-active Регистрация
-        form.index-modal__form
+            h2(onclick="HeaderActivateThis(this);ToggleBlockActual('off', '#login', 'hide');ToggleBlockActual('on', '#register', 'hide')")._title Войти
+            h2(onclick="HeaderActivateThis(this);ToggleBlockActual('off', '#register', 'hide');ToggleBlockActual('on', '#login', 'hide')")._title.-active Регистрация
+        form#register.index-modal__form.hide
             .input-field
-                input#email.validate(type="email")
-                label(for="email") Email
+                input#new-email.validate(type="email")
+                label(for="new-email") Email
                 span.helper-text(data-error="неверный формат почты", data-success="") 
             .input-field
-                input#pass.validate(type="password")
-                label(for="pass") пароль 
+                input#new-pass.validate(type="password")
+                label(for="new-pass") пароль 
                     span.ness *
             .lk__button-container 
-                a(href="#").lk__button.zr-button Сохранить
+                a(href="#").lk__button.zr-button Войти
+                a(href="#").lk__button--cancel Восстановить пароль
+        form#login.index-modal__form
+            .input-field
+                input#current-email.validate(type="email")
+                label(for="current-email") Email
+                span.helper-text(data-error="неверный формат почты", data-success="") 
+            .input-field
+                input#current-pass.validate(type="password")
+                label(for="current-pass") пароль 
+                    span.ness *
+            .lk__button-container 
+                a(href="#").lk__button.zr-button Регистрация
                 a(href="#").lk__button--cancel Отмена
                     
         .index-modal__cross(onclick="toggleModal('#modal-in')")
