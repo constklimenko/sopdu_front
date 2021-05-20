@@ -1,0 +1,19 @@
+#modal-in.hide.index-modal
+    .index-modal__container.-in
+        ._header
+            h2(onclick="HeaderActivateThis(this);")._title Войти
+            h2(onclick="HeaderActivateThis(this);")._title.-active Регистрация
+        form.index-modal__form
+            .input-field
+                input#email.validate(type="email")
+                label(for="email") Email
+                span.helper-text(data-error="неверный формат почты", data-success="") 
+            .input-field
+                input#pass.validate(type="password")
+                label(for="pass") пароль 
+                    span.ness *
+            .lk__button-container 
+                a(href="#").lk__button.zr-button Сохранить
+                a(href="#").lk__button--cancel Отмена
+                    
+        .index-modal__cross(onclick="toggleModal('#modal-in')")
