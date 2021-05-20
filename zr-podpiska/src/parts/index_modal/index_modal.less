@@ -7,6 +7,32 @@
     z-index: 20;
     background-color: rgba(0, 0, 0, 0.445);
 
+
+    &__button{
+        justify-self: stretch;
+        max-width: 100%;
+
+        &--cancel{
+            font-size: 17px;
+            color: @gray_03;
+            text-decoration: none;
+        }
+    }
+
+    &__button-container{
+        padding-top: calc(3.7 * var(--font-size));
+        .grid-col-span-m;
+        .grid(1fr);
+        grid-row-gap: 22px;
+        justify-items: center;
+        width: 260px;
+        margin: auto;
+        @media only screen and (max-width: @size-tablete) {
+            margin-top: 1rem;
+            padding-top: 2.5em;
+        }
+    }
+
     &__container {
         
 
@@ -63,6 +89,7 @@
             font-size: calc(var(--h2-size) - 7px);
             padding: 0.4em;
             cursor: pointer;
+            border-bottom: 2px solid #D7D7D7;
             &--active{
                 color: @dark_red;
                 border-bottom: 2px solid @dark_red;
@@ -81,7 +108,25 @@
             justify-items: stretch;
             
             & h2{
-                text-align: center
+                text-align: center;
+                
+            }
+
+            &--recover{
+                grid-template-columns: 1fr; 
+            }
+        }
+
+        &__message{
+            font-size: @h2-size;
+            height: 100%;
+            width:100%;
+            padding: 20vh 75px;
+            text-align: center;
+            font-weight: 700;
+
+            @media only screen and (max-width: @size-mobile){
+                padding: 30vh 12px 30vh 12px;
             }
         }
 
@@ -123,6 +168,7 @@
     
     &__form{
         .container-m(260px);
+        padding: @h2-size 0;
         
     }
 

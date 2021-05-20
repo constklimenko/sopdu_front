@@ -6,26 +6,58 @@
         form#register.index-modal__form.hide
             .input-field
                 input#new-email.validate(type="email")
-                label(for="new-email") Email
+                label(for="new-email") Почта
+                    span.ness *
                 span.helper-text(data-error="неверный формат почты", data-success="") 
             .input-field
                 input#new-pass.validate(type="password")
-                label(for="new-pass") пароль 
+                label(for="new-pass") Пароль 
                     span.ness *
-            .lk__button-container 
-                a(href="#").lk__button.zr-button Войти
-                a(href="#").lk__button--cancel Восстановить пароль
+            .index-modal__button-container 
+                a(href="#").index-modal__button.zr-button Войти
+                a(onclick="toggleModal('#modal-in');toggleModal('#modal-recover')").index-modal__button--cancel Восстановить пароль
         form#login.index-modal__form
             .input-field
                 input#current-email.validate(type="email")
-                label(for="current-email") Email
+                label(for="current-email") Почта
+                    span.ness *
                 span.helper-text(data-error="неверный формат почты", data-success="") 
             .input-field
                 input#current-pass.validate(type="password")
-                label(for="current-pass") пароль 
+                label(for="current-pass") Пароль 
                     span.ness *
-            .lk__button-container 
-                a(href="#").lk__button.zr-button Регистрация
-                a(href="#").lk__button--cancel Отмена
+            .index-modal__button-container 
+                a(onclick="toggleModal('#modal-in');toggleModal('#modal-send-mail')").index-modal__button.zr-button Регистрация
+                .choose__month__little-text Нажимая кнопку “оформить подписку“ вы даете согласие на 
+                    a(href="/agreement.html")  обработку персональных данных
                     
         .index-modal__cross(onclick="toggleModal('#modal-in')")
+
+
+#modal-recover.hide.index-modal
+    .index-modal__container.-in
+        ._header.-recover 
+            h2._title Восстановление пароля
+        form#recover.index-modal__form
+            .input-field
+                input#recover-email.validate(type="email")
+                label(for="recover-email") Почта
+                    span.ness *
+                span.helper-text(data-error="неверный формат почты", data-success="")
+            .index-modal__button-container 
+                a(onclick="toggleModal('#modal-recover');toggleModal('#modal-send-link')").index-modal__button.zr-button Восстановить пароль
+                .small_text 1 из 3 попыток
+
+        .index-modal__cross(onclick="toggleModal('#modal-recover')")
+
+
+#modal-send-link.hide.index-modal
+    .index-modal__container.-in
+        ._message Отправили вам ссылку на почту для смены пароля
+        .index-modal__cross(onclick="toggleModal('#modal-send-link')")
+
+#modal-send-mail.hide.index-modal
+    .index-modal__container.-in
+        ._message Отправили вам письмо на почту для подтверждения
+        .index-modal__cross(onclick="toggleModal('#modal-send-mail')") 
+
