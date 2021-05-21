@@ -1,0 +1,443 @@
+@media (max-width: 1600px){
+	.scrollit{
+		display: none;
+	}
+}
+
+@media (max-width: 1400px){
+	.modal-content-block{
+		padding: 60px;
+		width: 720px;
+	}
+}
+
+
+@media (max-width: 1200px){
+	.a-dn{
+		display: none;
+	}
+	.a-db{
+		display: block;
+	}
+	.a-flex{
+		display: flex;
+	}
+	h1{
+		font-size: 40px;
+	}
+	h6{
+		font-size: 15px;
+	}
+	p{
+		font-size: 12px;
+	}
+
+	.works__title{
+		font-size: 15px;
+	}
+
+	.ordercall .phone{
+		margin-top: 3px;
+		font-weight: 600;
+		font-size: 20px;
+	}
+	.social a+a{
+		margin-left: 18px;
+	}
+	.mainpage .mybtn{
+		font-size: 16px;
+		padding: 0px 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-left: 0;
+	}
+	.porfoliobtn{
+		font-size: 16px;
+		margin-left: 10px;
+	}
+	.problems_bg p{
+		font-size: 12px;
+	}
+	.problems_bg h5{
+		font-size: 14px;
+	}
+	.problems_bg h6{
+		font-weight: 600;
+	}
+	.second .wrapper{
+		margin-top: 0;
+	}
+	.block-1, .block-2, .block-3, .block-4 {
+		margin-top: 60px;
+	}
+	.freeconsult a{
+		font-size: 16px;
+	}
+	.scnd_block-info{
+		display: block;
+	}
+	.scnd_block h6{
+		font-size: 28px;
+	}
+	.scnd_block p{
+		font-weight: 400;
+		font-size: 18px;
+		width: 100%;
+	}
+	.scnd_block h6{
+		font-size: 20px;
+	}
+	.pricelist h3{
+		font-size: 15px !important;
+	}
+	.cost {
+		font-weight: 700;
+		font-size: 15px;
+		margin-top: -3px;
+		padding-top: 8px;
+	}
+	.cost span{
+		font-size: 25px;
+	}
+
+	.stages_title h3 {
+		line-height: 120%;
+		font-weight: bold;
+		font-size: 40px;
+	}
+
+	.anim1 {
+		transform: scale(0.6);
+		position: absolute;
+		right: 0;
+	}
+
+	.centermain{
+		position: relative;
+		overflow: hidden;
+	}
+
+	.content-col{
+		width: 410px;
+		max-width: 100%;
+		flex: none;
+		z-index: 1;
+	}
+
+	.modal-video{
+		display: none;
+	}
+
+	.modal-content-block{
+		width: 100%;
+	}
+
+}
+
+@media(max-width: 767px){
+	.ordercall{
+		display: none;
+	}
+
+	.social a+a{
+		margin-left: 0;
+	}
+
+	.stages_title h3{
+		font-size: 40px;
+	}
+
+	.a-menu a{
+		font-size: 15px;
+	}
+
+	.contact_number{
+		width: 100%;
+		flex-direction: column;
+		height: auto;
+	}
+
+	.call_me_btn{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 10px;
+		height: 40px;
+		line-height: 40px;
+		padding: 0;
+		font-size: 16px;
+	}
+
+	.enter__phone{
+		width: 100%;
+		height: 40px;
+		padding: 0;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.form-header {
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+
+	.form-text p {
+		margin-bottom: 25px;
+		font-size: 18px;
+		color: #000;
+	}
+
+	.modal-form{
+		margin-top: 50px;
+	}
+
+	.radio-text {
+		font-size: 18px;
+		height: 30px;
+		line-height: 30px;
+	}
+
+	.project-values {
+		margin-bottom: 30px;
+	}
+
+	.modal-input, .modal-textarea {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	.modal-input{
+		height: 30px;
+	}
+
+	.form-btn {
+		height: 40px;
+		font-size: 20px;
+		width: 170px;
+	}
+
+	.modal-content-block{
+		padding: 30px;
+	}
+
+	.contact_us{
+		font-size: 20px;
+	}
+
+}
+
+@media (max-width: 575px){
+	.mainlogo{
+		width: 106px;
+	}
+	.a-dn-m{
+		display: none;
+	}
+	.a-db-m{
+		display: block;
+	}
+
+	.social {
+		display: flex;
+	}
+	.menubtn{
+		width: 25px;
+		height: 21px;
+		background-size: 80%;
+		margin-left: 11px;
+		margin-top: 5px;
+	}
+	h1{
+		font-size: 30px;
+	}
+	h6{
+		font-size: 12px;
+	}
+	p{
+		/*font-size: 10px !*!important*!;
+		line-height: 13px !*!important*!;*/
+	}
+	.second h1{
+		font-size: 25px;
+	}
+	.second h6 {
+		margin: 50px 0 18px -15px;
+	}
+	.mainpage .mybtn{
+		font-size: 12px;
+		z-index: 50;
+	}
+	.porfoliobtn{
+		font-size: 16px;
+		margin-left: 10px;
+	}
+	.col6tocol12{
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+	.freeconsult {
+		margin: 0 !important;
+		text-align: center;
+	}
+	.stages_title img{
+		width: 70px;		
+	}
+	.stages_title h3{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.slider_title{
+		font-size: 15px;
+		padding-bottom: 0;
+	}
+	.stage_info{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.about-us h3{
+		font-size: 30px;
+		margin: 10px 0;
+	}
+	.about-us_info{
+		display: block;
+	}
+	.about-us_info .col-6{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.owl-next{
+		display: none !important;
+	}
+	.contact_us{
+		line-height: 25px;
+		margin: 15px 0;
+	}
+	.contact_number{
+		display: block;
+	}
+	.contact_number .col-7, .contact_number .col-5{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.contact_number .col-5{
+		margin-top: 10px;
+		max-width: 90%;
+	}
+	/*.enter__phone {
+		margin-left: -15px;
+	}*/
+	.pricelist .list{
+		display: block;
+	}
+	.pricelist .list .col-4{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.description {	
+		height: 59px;
+	}
+	.thrd_block {
+		display: block;
+	}
+	.thrd_block .col-6, .thrd_block .col-3,
+	.fourth_block .col-6, .fourth_block .col-3{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.contact_number .col-7{
+		width: 100%;
+	}
+	.contact_number {
+		margin-top: 70px;
+	}
+
+	.slider_stage{
+		padding: 0;
+		margin-bottom: 9px;
+		padding-left: 50px;
+		margin-top: 10px;
+	}
+
+	.stage-img{
+		height: 62.2vw;
+	}
+
+	.centermain p{
+		margin-bottom: 40px;
+		/*width: 225px;*/
+		max-width: 100%;
+	}
+
+	.mainpage .mybtn{
+		height: 30px;
+	}
+
+	.centermain {
+		overflow: visible;
+		justify-self: center;
+		flex: 1;
+		align-items: center;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.anim1 {
+		transform: scale(0.3);
+		position: absolute;
+		right: 50px;
+		bottom: -70px;
+	}
+
+	.answered{
+		font-size: 10px;
+	}
+
+	.centermain h6{
+		margin-top: 0;
+	}
+
+	.mainpage {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.a-menu{
+		margin-top: 65px;
+	}
+
+	.form-header{
+		font-size: 24px;
+	}
+
+	.contact_us{
+		margin-bottom: 15px;
+		display: block;
+	}
+
+	.footer_info{
+		flex-wrap: wrap;
+	}
+
+	.footer-col{
+		width: 50%;
+	}
+
+	.footer-white{
+		font-weight: 600;
+		font-size: 16px;
+		color: #fff !important;
+	}
+
+	.white-min{
+		font-weight: 500;
+		font-size: 12px;
+		color: #fff !important;
+		text-decoration: underline;
+	}
+
+	.footer-small{
+		font-size: 7px;
+		font-weight: 500;
+	}
+}

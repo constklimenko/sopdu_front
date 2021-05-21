@@ -1,0 +1,106 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Bold.ttf);
+    font-weight: bold;
+}
+
+/*@font-face {*/
+/*    font-family: Gilroy-BoldItalic;*/
+/*    src: url(../font/Gilroy-BoldItalic.ttf);*/
+/*}*/
+/*@font-face {*/
+/*    font-family: Gilroy-Extrabold;*/
+/*    src: url(../font/Gilroy-Extrabold.ttf);*/
+/*}*/
+/*@font-face {*/
+/*    font-family: Gilroy-ExtraboldItalic;*/
+/*    src: url(../font/Gilroy-ExtraboldItalic.ttf);*/
+/*}*/
+/*@font-face {*/
+/*    font-family: Gilroy-Heavy;*/
+/*    src: url(../font/Gilroy-Heavy.ttf);*/
+/*}*/
+/*@font-face {*/
+/*    font-family: Gilroy-HeavyItalic;*/
+/*    src: url(../font/Gilroy-HeavyItalic.ttf);*/
+/*}*/
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Light.ttf);
+    font-weight: 300;
+}
+/*@font-face {
+    font-family: Gilroy-LightItalic;
+    src: url(../font/Gilroy-LightItalic.ttf);
+}
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url(../font/Gilroy-Medium.ttf);
+}
+@font-face {
+    font-family: Gilroy-MediumItalic;
+    src: url(../font/Gilroy-MediumItalic.ttf);
+}*/
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/Gilroy-Regular.ttf);
+    font-weight: normal;
+}
+
+/*@font-face {
+    font-family: Gilroy-RegularItalic;
+    src: url(../font/Gilroy-RegularItalic.ttf);
+}
+@font-face {
+    font-family: Gilroy-Semibold;
+    src: url(../font/Gilroy-Semibold.ttf);
+}
+@font-face {
+    font-family: Gilroy-SemiboldItalic;
+    src: url(../font/Gilroy-SemiboldItalic.ttf);
+}
+@font-face {
+    font-family: Gilroy-Thin;
+    src: url(../font/Gilroy-Thin.ttf);
+}
+@font-face {
+    font-family: Gilroy-ThinItalic;
+    src: url(../font/Gilroy-ThinItalic.ttf.);
+}
+@font-face {
+    font-family: Gilroy-UltraLightItalic;
+    src: url(../font/Gilroy-UltraLightItalic.ttf);
+}*/
+h1{
+    font-size: 69px;
+    font-weight: bold;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 40px;
+}
+h4{
+    font-size: 30px;
+}
+h5{
+    font-size: 20px;
+}
+h6{
+    font-size: 18px;
+}
+
+.gray18, .gray18 a{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.white, .white a{
+    color: #fff;
+}
