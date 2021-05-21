@@ -9,11 +9,16 @@ html(lang="ru")
         
         ._404__logo
         
-        ._404__container
-            h1._404__title(style="text-align:center")  Спасибо за подписку, Константин Константинович
-            .header__in.zr-button(href="/" style="width:100%;")
-                .header__in__img( style="color:white;")  ddd
-                span.header__in__text Вход в личный кабинет
+        ._404__container(style="padding: 2.2em 2em;")
+            ._404__container__inner
+                h1._404__title(style="text-align:center")  Спасибо за подписку, Константин Константинович
+                .header__in.m-hide.zr-button(href="/lk.html" style="width:100%;")
+                    .header__in__img( style="color:white;")  ddd
+                    span.header__in__text Вход в личный кабинет
+                .header__in.m-show.zr-button(href="/" )
+                    
+                    span.header__in__text На главную
+                
         footer.footer.footer--404
             .footer__container.footer__container--404
                 

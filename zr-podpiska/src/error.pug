@@ -9,9 +9,18 @@ html(lang="ru")
         
         ._404__logo
         
-        ._404__container
-            h1._404__title  Ошибка 404
-            ._404__button.zr-button(href="/") На главную 
+        ._404__container._404__container--error(style="padding: 2.2em 2em;")
+            ._404__container__inner
+                h1._404__title._404__title--error(style="")  Ошибка при оплате
+                    .errror__cross
+                .header__in.m-hide.zr-button(href="/lk.html" style="width:100%;")
+                    
+                    
+                    span.header__in__text Вернуться к оформлению
+                .header__in.m-show.zr-button(href="/" )
+                    
+                    span.header__in__text На главную
+                
         footer.footer.footer--404
             .footer__container.footer__container--404
                 
