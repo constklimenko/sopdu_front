@@ -1,0 +1,156 @@
+.a-dn{
+	display: flex;
+	gap: 20px;
+}
+
+.a-dn a:hover, .ordercall a:hover{
+	color:#C60000;
+}
+
+.ordercall{
+	margin-top: 22px;
+}
+
+.mybtn{
+    min-height: 60px;
+}
+.mybtn:hover{
+	background: #439FDB;
+}
+
+.aic{
+    gap:70px
+}
+
+.answered{	
+	font-size: 18px;
+}
+
+.anim1 img{
+	animation-timing-function: ease-in-out;
+}
+
+.second h1, .second h2{
+	white-space: nowrap;
+	margin-left: -15px;
+}
+.second h1 span,.second h2 span{
+	background: #C60000;
+	color: #fff;
+	/*font-family: Gilroy-Bold;*/
+	font-weight: bold;
+    padding-left: .3em;
+	padding-right: .3em;
+}
+
+.second h1,.second h2, .wrapper h5{
+	/*font-family: Gilroy-Bold;*/
+	font-weight: bold;
+}
+.works__title, .list div h3,.about-us > h3, h3 span,h2 span {
+	padding-left: .3em;
+	padding-right: .3em;
+}
+
+.freeconsult a:hover{
+	color: #439FDB;
+}
+
+.watch__more{
+	font-family: Gilroy;
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 100%;
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration-line: underline;
+color: #FFFFFF;
+}
+
+.works_inner h6{
+	
+	font-weight: 700;
+}
+
+.order_btn {
+	font-size: 20px;}
+
+	.pricelist .list .col-4 {
+		padding-top: 36px;
+		border: 0.870786px solid #E0E0E0;
+	
+		box-shadow: -8.70786px -8.70786px 26.1236px rgba(255, 255, 255, 0.9), 8.70786px 8.70786px 52.2472px rgba(0, 0, 0, 0.07);
+	}
+
+.stages_title h3 {
+	font-weight: bold;
+}
+
+.owl-prev{
+	display: inline-block !important;
+}
+
+.owl-nav > button {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-color: #fff !important;
+	overflow: none !important;
+	border:none !important;
+	transition: .3s;
+}
+.owl-nav > button span{
+	color: #000;
+	font-size: 30px;
+	line-height: 30px;
+	transition: .3s;
+}
+.owl-nav > button:active, .owl-nav > button:hover,.owl-nav > button:focus{
+	overflow: none !important;
+	border:none !important;
+	transition: 0.3s;
+}
+
+.our_team .owl-nav > button{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-color: #1c1c1c !important;
+	/*position: absolute;
+	top: 10px;
+	left: 100px;*/
+}
+.our_team .owl-nav > button span{
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+
+.owl-nav > button:hover{
+	background-color: #c60000 !important;
+	transition: 0.3s;
+}
+
+.owl-nav > button:hover span{
+	color: #fff
+}
+
+.about-us_info p{
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 180%;
+}
+
+.about-us_info h6{
+	font-size: 25px;}
+
+	.contact_us {
+		font-weight: 700;
+		font-size: 30px;}
+
+		.member_status {
+			padding-top: 10px;	
+		}
