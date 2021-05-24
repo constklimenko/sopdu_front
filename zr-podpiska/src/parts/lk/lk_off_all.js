@@ -1,5 +1,5 @@
 function LkOffAll() {
-    var lk = document.querySelector('.lk__right');
+    var lk = document.querySelector('.lk__right__container');
     for (var i = 0; i < lk.childNodes.length; i++) {
         lk.childNodes[i].classList.add('hide');
     }
